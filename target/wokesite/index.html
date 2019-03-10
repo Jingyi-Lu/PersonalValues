@@ -1,0 +1,26 @@
+<html>
+<script>
+    function myfunction() {
+        a = document.getElementById("hello");
+        a.innerHTML = "do the survey";
+        b = document.getElementById("sendbutton");
+        b.style.display="block";
+        c =document.getElementById("startbutton");
+        c.style.display="none";
+
+    }
+    function myfunction2() {
+        a = document.getElementById("hello");
+        a.innerHTML = "Here is your result";
+        c =document.getElementById("startbutton");
+        c.style.display="none";
+        b = document.getElementById("sendbutton");
+        b.style.display="none";
+    }
+</script>
+<body>
+<p id="hello">Hello World!</p>
+<button id="startbutton" onclick="myfunction()">start now</button>
+<button id="sendbutton" style="display: none" onclick="myfunction2()">send result</button>
+</body>
+</html>

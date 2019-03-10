@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pvs.personalvalues.mapper.UserMapper">
+    <resultMap id="UserResult" type="com.pvs.personalvalues.model.User">
+
+    </resultMap>
+
+    <select id="GetUserInfoByEmail" parameterType="java.lang.String" resultType="com.pvs.personalvalues.model.User">
+        select *
+        from woke_user
+        where email = #{email}
+    </select>
+    
+    <insert id="InsertUserInfo" parameterType="com.pvs.personalvalues.model.User">
+        insert into woke_user(uid, email, username, pwd, user_type)
+        values (#{uid}, #{email}, #{username}, #{pwd}, #{user_type})
+    </insert>
+</mapper>
