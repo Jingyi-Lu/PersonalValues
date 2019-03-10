@@ -5,9 +5,9 @@
 
 Requirements | Plan & Schedule | Register | Notes & Feedback | Test
 :-: | :-: | :-: | :-: | :-:  
-Requirements specification | Project plan | Decision making | Tutorial meeting | Testing report
-Requirements analysis | Agenda | Risk register | Client meeting | 
-USM | Tracibility | Feasibility study| |  
+Requirements specification | <a href="https://trello.com/b/jWCw4csg/online-personal-value">Trello</a> | Decision making | <a href = "https://docs.google.com/document/d/1yghfH8AfrjeqPdkNujY9VYgS40qvWSo5E7XHX3YKDnM/edit">Tutorial meeting</a> | Testing report
+Requirements analysis | Project Plan | Risk register | Client meeting | 
+USM | Tracibility | Feasibility study| <a href="https://docs.google.com/document/d/1e5u0Zo0bFd1mN69hzaoVNZuS7XUhFwQR3yOwmsjUuA4/edit">Team meeting</a>|  
 
 #### Design
 Prototype | Model | Diagram  
