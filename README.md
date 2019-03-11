@@ -38,5 +38,15 @@ Fengyu Zou | u5933953 | UI/UX Design & Front-end
 Yilu Liu | u6270742 | UI/UX Design & Front-end & Communication
 
 ## Tools
-
-<img src="/imgs/tomcat.jpg">
+Tomcat  
+<img height=40px width=60px src="/imgs/tomcat.jpg">  
+Spring  
+<img src="/img/spring.jpg">  
+MyBatis  
+<img src="/img/mybatis.png">  
+BootStrap  
+<img src="/img/bootstrap.png">  
+DreamWeaver  
+<img src="/img/dreamweaver.png">  
+jQuery  
+<img src="/img/jquery.jpg">
