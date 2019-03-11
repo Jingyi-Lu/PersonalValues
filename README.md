@@ -41,12 +41,12 @@ Yilu Liu | u6270742 | UI/UX Design & Front-end & Communication
 Tomcat  
 <img height=40px width=60px src="/imgs/tomcat.jpg">  
 Spring  
-<img src="/img/spring.jpg">  
+<img height=60px width=60px src="/imgs/spring.png">  
 MyBatis  
-<img src="/img/mybatis.png">  
+<img height=60px width=60px src="/imgs/mybatis.png">  
 BootStrap  
-<img src="/img/bootstrap.png">  
+<img height=60px width=60px src="/imgs/bootstrap.png">  
 DreamWeaver  
-<img src="/img/dreamweaver.png">  
+<img height=60px width=60px src="/imgs/dreamweaver.png">  
 jQuery  
-<img src="/img/jquery.jpg">
+<img height=60px width=60px src="/imgs/jquery.jpg">
