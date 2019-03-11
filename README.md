@@ -30,12 +30,13 @@ Prototype | Database |
 
 Name | UniID | Roles
 :-: | :-: | :-:
-Jingyi Lu | u5932987 | 
-Jaryd Sartori | u5799628 |
-Xueting Sun | u5900182 | 
-Suifeng Zhang | u5924562 |
-Fengyu Zou | u5933953 | 
-Yilu Liu | u6270742 | 
+Jingyi Lu | u5932987 | Back-end & Project Manager
+Jaryd Sartori | u5799628 | Front-end & Project Manager & Communication
+Xueting Sun | u5900182 | UI/UX Design & Front-end & Back-end
+Suifeng Zhang | u5924562 | UI/UX Design & Front-end
+Fengyu Zou | u5933953 | UI/UX Design & Front-end
+Yilu Liu | u6270742 | UI/UX Design & Front-end & Communication
 
 ## Tools
 
+<img src="/imgs/tomcat.jpg">
