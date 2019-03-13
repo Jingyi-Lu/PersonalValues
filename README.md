@@ -21,7 +21,7 @@ Prototype | Model | Diagram
 Sketches | Domain Model | [Flowcharts](https://drive.google.com/drive/folders/1Lye_nWow9K-iMiylLOOUG2Ycpn05ylzH)  
 Prototype | Database | [Sequence Diagram](https://drive.google.com/file/d/1rJo-V9He1qRchsLB_ZBrm3PPF-z_5GvS/view?usp=sharing)  
 
-#### useful links:
+#### Useful Links:
 - [Trello](https://trello.com/b/jWCw4csg/online-personal-value)
 - [Google Drive](https://drive.google.com/drive/folders/1JXmdufWA4A6IveU9PfW6OlN-o3qMd_8U)
 
@@ -42,12 +42,12 @@ This project is purposed to last for one semester. By the end of the project, mi
 
 Details in [Requirements](https://drive.google.com/drive/folders/1AbX6a5bbsVF_rn4_u1NavhayWfTWDKMg?usp=sharing)
 
-#### Deliverable
-Details in [Statement of Work - 4 deliverable and scheduele](https://docs.google.com/document/d/1ooCDWrFfx0ZvHPXHtY1BuWsE3_zYZ7ML1lkHwDKBcCk/edit?usp=sharing)
+#### Deliverables
+Details in [Statement of Work - 4 deliverables and scheduele](https://docs.google.com/document/d/1ooCDWrFfx0ZvHPXHtY1BuWsE3_zYZ7ML1lkHwDKBcCk/edit?usp=sharing)
 
 ## Our Client
 
-Our client, Mark Chenery, has a vision in the value of personal values survey and would like to take this as a tool as collecting data for psychology research.
+Our client, Mark Chenery, has a vision in the value of personal values survey and would like to take this as a tool as to collect data for psychology researchs.
 
 ## Team Members
 
