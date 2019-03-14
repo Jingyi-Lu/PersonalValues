@@ -18,7 +18,7 @@ Requirements | Plan & Schedule | Register | Notes & Feedback | Test
 #### Design
 Prototype | Model | Diagram  
 :-: | :-: | :-:  
-Sketches | Domain Model | [Flowcharts](https://drive.google.com/drive/folders/1Lye_nWow9K-iMiylLOOUG2Ycpn05ylzH)  
+[Sketches](https://drive.google.com/file/d/1oVxNT-ZKJAr0x4AjvD8LcV5J8T_PdpcE/view?usp=sharing) | Domain Model | [Flowcharts](https://drive.google.com/drive/folders/1Lye_nWow9K-iMiylLOOUG2Ycpn05ylzH)  
 [Prototype](https://drive.google.com/drive/folders/1XRmqUnzLAsuYjxC_sI6zk4LWY8zBEAUQ) | Data Model | [Sequence Diagram](https://drive.google.com/file/d/1rJo-V9He1qRchsLB_ZBrm3PPF-z_5GvS/view?usp=sharing)  
 
 ## Project Overview
