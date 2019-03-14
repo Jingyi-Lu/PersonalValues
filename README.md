@@ -29,9 +29,11 @@ The objective of this project is to develop a website hosted Personal Values Que
 
 Details in [Statement of Work - 3 scope](https://docs.google.com/document/d/1ooCDWrFfx0ZvHPXHtY1BuWsE3_zYZ7ML1lkHwDKBcCk/edit?usp=sharing)
 
-#### Client's Expectation
+#### Client's Expectation & Vision
 
 This project is purposed to last for one semester. By the end of the project, minimum variable product is expected to be delieverd, i.e. the website could be able to help people conduct the survey and view the pretty diagrams generated from their results.
+
+A particularly customized online personal values survey helps the client collect first-hand data and can even analyse data from a partcular group or organization. At the same time, when survey users get access to survey pages, potentially client's websites and his organization can be also promoted. Moreover, the client requires an impressive and attractive survey webpage with perfect interactions and visualization of survey results.
 
 Details in [Requirements](https://drive.google.com/drive/folders/1AbX6a5bbsVF_rn4_u1NavhayWfTWDKMg?usp=sharing)
 
@@ -110,5 +112,7 @@ Here are the technical tools that are/will be used for the project
 <img height=60px width=60px src="/imgs/bootstrap.png"> BootStrap  
 
 <img height=60px width=60px src="/imgs/dreamweaver.png"> DreamWeaver  
+
+<img height=60px width=60px src="/imgs/mockingbot.png"> MockingBot  
 
 <img height=60px width=60px src="/imgs/jquery.jpg"> jQuery  
