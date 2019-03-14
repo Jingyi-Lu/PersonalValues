@@ -40,6 +40,8 @@ Details in [Statement of Work - 4 deliverables and scheduele](https://docs.googl
 
 #### Schedules
 
+<img width=600px src="/imgs/schedule.jpg">
+
 ###### Tutorial Meeting
 
 4-6 p.m. Friday, all members should attend.
