@@ -17,6 +17,9 @@ public class QuestionServiceImpl implements QuestionService {
     public QuestionMsg getQuestions() {
         QuestionMsg msg = new QuestionMsg();
         List<Question> questionList = mapper.GetQuestionsByQuestionaireId(1);
-        return null;
+        msg.setQuestions(questionList);
+        msg.setError(1);
+        msg.setQuestionnaireId(1);
+        return msg;
     }
 }

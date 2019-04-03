@@ -1,12 +1,12 @@
 package com.pvs.personalvalues.model;
 
 public class Question {
-    int number;
+    int QuestionNumber;
     int QuestionaireId;
     String content;
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setQuestionNumber(int number) {
+        this.QuestionNumber = number;
     }
 
     public void setQuestionaireId(int questionaireId) {
@@ -17,8 +17,8 @@ public class Question {
         this.content = content;
     }
 
-    public int getNumber() {
-        return number;
+    public int getQuestionNumber() {
+        return QuestionNumber;
     }
 
     public int getQuestionaireId() {

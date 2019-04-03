@@ -99,7 +99,7 @@
 			
 		}
 		
-		.main-questionPage #questionPage-question2{
+		.main-questionPage{
 			padding: 0;
 			margin: 3% 6% 3% 6%;
 			font-size: 25px;
@@ -344,12 +344,13 @@
 		
 			
 	</style>
+
 	<script>
 	//collect all 
 	var onechoose = [];
 	var allchoose = [];
 	//for random question
-	var qestionArray = [0,1,2,3];
+	var qestionArray = [1,2,3,4];
 	//for random color
 	var template = [3,2,1,0]
 	//shuffle a array
@@ -365,6 +366,7 @@
 		}
 	  	return arr;
 	}
+	var aaqqqa = 7;
 		
 	var count = 1
 	
@@ -373,7 +375,26 @@
 	
 	$(document).ready(function(){
   		$("#HomePage-button").click(function(){
-			count = 1
+                    htmlobj=$.ajax({url:"http://localhost:8080/question/getquestions",async:false});
+                    //console.log(htmlobj.responseText);
+                    var json = htmlobj.responseText;
+
+            var aaa = JSON.parse(json);
+            var questionsArr = aaa.questions;
+            aaqqqa = questionsArr.length-1;
+            questionsArr.forEach(function(item, index, array) {
+                console.log(item.content);
+                $(".main-questionPage p")[index].innerHTML = item.content;
+            });
+
+            var arrr = [];
+            for (var i = 0; i < aaqqqa; i++){
+                arrr[i] = i;
+            }
+            newArray = shuffle(arrr);
+
+
+			count = 1;
     		$(".main-HomePage").slideToggle();
 			$(".main-questionPage p").css("display","none");
 			$(".main-questionPage").css("display","block");
@@ -393,7 +414,6 @@
 			} if (colorFirst == 2) {
 			$(".main-questionPage #answerBar").attr("class","blue");
 			$(".main-questionPage #answerBar").css("display","block");	
-			$(".main-questionPage").css("background-color","#EEF3FA")
 			} if(colorFirst ==3) {
 			$(".main-questionPage #answerBar").attr("class","green");
 			$(".main-questionPage #answerBar").css("display","block");	
@@ -471,7 +491,7 @@
 				alert("You have to choose one answer!");
 			
 		}else {
-				if(count <= 3){
+				if(count <= aaqqqa){
 				$(".main-questionPage #answerBar li").removeClass("selected");
 				$(".main-questionPage .progressBar").append('<img style="margin-right: 5px" src="icons8-flower-64.png" alt="progressIcon" width="35px" height="35px"/>');	
 				$(".main-questionPage #answerBar li").css("height","15px");
@@ -583,8 +603,13 @@
 		<p id="questionPage-question2">Test222It is important to this person to be rich. They want to have a lot of money and expensive things.</p>
 		<p id="questionPage-question3">Test333This person thinks it is important that everyone in the world be treated equally. They believe everyone should have equal opportunities in life. </p>
 		<p id="questionPage-question4">Test444It’s important to this person to show their abilities. They want people to admire what they do. </p>
-	    
-		<ul class="topAnswer">
+    <p >Test466’s important to this person to show their abilities. They want people to admire what they do. </p>
+    <p>55’s important to this person to show their abilities. They want people to admire what they do. </p>
+    <p>77’s important to this person to show their abilities. They want people to admire what they do. </p>
+    <p id="questionPage-qu">999’s important to this person to show their abilities. They want people to admire what they do. </p>
+    <p id="questionstion4">7888’s important to this person to show their abilities. They want people to admire what they do. </p>
+    <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+    <ul class="topAnswer">
 			<li style="visibility: hidden;">NotLikeMeAtALL</li>
 			<li style="visibility: hidden;">NotLikeMe</li>
 			<li style="visibility: hidden;">Moderate</li>

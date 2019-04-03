@@ -25,6 +25,7 @@ public class QuestionController {
 
     @RequestMapping("/getquestions")
     public QuestionMsg GetQuestions(){
+        LOGGER.info("bala");
         QuestionMsg msg = questionService.getQuestions();
         return msg;
     }
