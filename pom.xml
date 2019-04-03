@@ -9,7 +9,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>wokesite Maven Webapp</name>
+  <name>Personal Values Maven Webapp</name>
   <url>http://www.example.com</url>
 
   <properties>
@@ -152,7 +152,7 @@
   </dependencies>
 
   <build>
-    <finalName>wokesite</finalName>
+    <finalName>PersonalValues</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
