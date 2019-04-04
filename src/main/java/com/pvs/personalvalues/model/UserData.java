@@ -1,49 +1,123 @@
 package com.pvs.personalvalues.model;
 
 public class UserData {
-    String id;
-    int gender;
-    String location;
-    int age;
-    String answers;
+    int sd;
+    int pow;
+    int uni;
+    int ach;
+    int sec;
+    int stim;
+    int con;
+    int trad;
+    int hed;
+    String gender;
+    String postcode;
+    String age;
+    String party;
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
-    public void setAnswers(String answers) {
-        this.answers = answers;
-    }
-
-    public void setGender(int gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setAge(String age) {
+        this.age = age;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setAch(int ach) {
+        this.ach = ach;
     }
 
-    public int getAge() {
+    public void setCon(int con) {
+        this.con = con;
+    }
+
+    public void setHed(int hed) {
+        this.hed = hed;
+    }
+
+    public void setParty(String party) {
+        this.party = party;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
+    }
+
+    public void setPow(int pow) {
+        this.pow = pow;
+    }
+
+    public void setSd(int sd) {
+        this.sd = sd;
+    }
+
+    public void setSec(int sec) {
+        this.sec = sec;
+    }
+
+    public void setStim(int stim) {
+        this.stim = stim;
+    }
+
+    public void setTrad(int trad) {
+        this.trad = trad;
+    }
+
+    public void setUni(int uni) {
+        this.uni = uni;
+    }
+
+    public int getSec() {
+        return sec;
+    }
+
+    public int getAch() {
+        return ach;
+    }
+
+    public int getCon() {
+        return con;
+    }
+
+    public int getHed() {
+        return hed;
+    }
+
+
+    public int getPow() {
+        return pow;
+    }
+
+    public int getSd() {
+        return sd;
+    }
+
+    public int getStim() {
+        return stim;
+    }
+
+    public int getTrad() {
+        return trad;
+    }
+
+    public int getUni() {
+        return uni;
+    }
+
+    public String getAge() {
         return age;
     }
 
-    public int getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public String getAnswers() {
-        return answers;
+    public String getParty() {
+        return party;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public String getLocation() {
-        return location;
+    public String getPostcode() {
+        return postcode;
     }
 }

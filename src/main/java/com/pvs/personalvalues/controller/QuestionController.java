@@ -19,7 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/question")
 public class QuestionController {
-    private static final Logger LOGGER = LoggerFactory.getLogger(UserApiController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(QuestionController.class);
     @Autowired
     QuestionService questionService;
 
@@ -34,7 +34,8 @@ public class QuestionController {
     public SaveUserDataMsg SaveUserData(@RequestBody UserData data){
         SaveUserDataMsg msg = new SaveUserDataMsg();
         msg.setError(1);
-        msg.setId("Yes, I got it, but the database is not working. Here is your answers: "+data.getAnswers());
+        LOGGER.info(data.getParty());
+        msg = questionService.saveUserData(data);
         return msg;
     }
 }

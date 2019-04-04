@@ -7,6 +7,12 @@
     <select id="GetQuestionsByQuestionaireId" parameterType="java.lang.Integer" resultType="com.pvs.personalvalues.model.Question">
         select *
         from Question
-        where #{questionaireid} = 1
+        where #{questionaireid} = questionaireid
     </select>
+
+    <insert id="saveUserData" parameterType="com.pvs.personalvalues.model.UserData">
+        insert into UserData values (
+          #{sd},#{pow},#{uni},#{ach},#{sec},#{stim},#{con},#{trad},#{hed},#{gender},#{postcode},#{age},#{party}
+        )
+    </insert>
 </mapper>

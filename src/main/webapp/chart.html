@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <style>
+		#chartdiv {
+  			width: 100%;
+  			height: 500px;
+		}
+			
+			
+		body {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			
+		}
+			
+		.navigator ul{
+			background-color: rgba(179,179,179,0.8);
+			list-style-type: none;
+			margin-bottom: 6%;
+			margin-top: 0;
+			padding:0;
+			width: 100%;
+			overflow: hidden;
+	
+		}
+		
+		.navigator li{
+			float: left;
+			display: block;
+			width: 50%;
+			
+		}
+		
+		.navigator li a{
+			display: block;
+			color: rgba(255,255,255,0.8);
+			text-align: center;
+			font-size: 30px;
+			margin-top: 1%;
+			margin-bottom: 1%;
+			
+		}
+			
+		.container{
+			position: absolute;
+			padding: 0;
+			margin: 0;
+			background-color: rgba(231,220,220,0.9);
+			height: 70%;
+			width: 80%;
+			left: 10%;
+			top: 15%;
+			display: none;
+			
+		}
+        </style>	
+		<script src="https://www.amcharts.com/lib/4/core.js"></script>
+		<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+		<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    </head>
+	
+	
+   	<body>
+		<div class="navigator">
+			<ul>
+  			<li id="Home"><a href="#home">Home</a></li>
+     		<!--<li><a href="#news">Instructions</a></li>
+  			<li><a href="#contact">Background</a></li>-->
+  			<li><a href="#about">About us</a></li>
+			</ul>
+		</div>
+		<div id="chartdiv"></div>
+		<img width="45%" style="margin-left: 9%;margin-top: 8%;margin-bottom: 5%;" src="WechatIMG94.png">
+		<img width="43%" style="float: right;margin-top: 10%" src="WechatIMG96.jpeg">
+
+		
+		<script>
+			var temp1 = [];
+			var temp2 = [];
+			var temp3 = [];	
+			var temp4 = [];
+			var temp5 = [];
+			var temp6 = [];
+			var temp7 = [];
+			var temp8 = [];
+			var temp9 = [];
+	
+			var value = window.sessionStorage.name;
+			var getValue = value.split("-");
+			var answerList = getValue.slice(0,getValue.length/2);
+			var typeList = getValue.slice(getValue.length/2,getValue.length+1);
+			for (i=0;i<answerList.length;i++) {
+				if(typeList[i] ==  "SD"){
+					temp1.push(answerList[i]);
+				}
+				if(typeList[i] ==  "POW"){
+					temp2.push(answerList[i]);
+				}
+				if(typeList[i] ==  "UNI"){
+					temp3.push(answerList[i]);
+				}
+			    if(typeList[i] ==  "ACH"){
+					temp4.push(answerList[i]);
+				}
+				if(typeList[i] ==  "SEC"){
+					temp5.push(answerList[i]);
+				}
+				if(typeList[i] ==  "STIM"){
+					temp6.push(answerList[i]);
+				}
+				if(typeList[i] ==  "CON"){
+					temp7.push(answerList[i]);
+				}
+				if(typeList[i] ==  "TRAD"){
+					temp8.push(answerList[i]);
+				}
+				if(typeList[i] ==  "HED"){
+					temp9.push(answerList[i]);
+				}
+			}
+			
+
+			function sum(arr) {
+    			var s = parseInt(arr[0]);
+    			for (i=1; i<arr.length; i++) {
+        		s += parseInt(arr[i]);
+    		}
+    			return s;
+			}
+			
+			
+			// Themes begin
+			am4core.useTheme(am4themes_animated);
+			// Themes end
+			// Create chart
+			var chart = am4core.create("chartdiv", am4charts.PieChart);
+        	chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+       		
+			chart.data = [
+				{
+					country: "SD",
+					value: sum(temp1)/temp1.length,
+          		},
+         		{
+    				country: "POW",
+    				value: sum(temp2)/temp2.length,
+  				},
+  				{
+					country: "UNI",
+    				value: sum(temp3)/temp3.length,
+  				},
+  				{
+					country: "ACH",
+    				value: sum(temp4)/temp4.length,
+  				},
+  				{
+					country: "SEC",
+    				value: sum(temp5)/temp5.length,
+  				},
+  				{
+					country: "STIM",
+    				value: sum(temp6)/temp6.length,
+  				},
+  				{
+					country: "CON",
+    				value: sum(temp7)/temp7.length,
+  				},
+  				{
+					country: "TRAD",
+    				value: sum(temp8)/temp8.length,
+  				},
+  				{
+					country: "HED",
+    				value: sum(temp9)/temp9.length,
+  				},
+
+			];
+			
+			var series = chart.series.push(new am4charts.PieSeries());
+			series.dataFields.value = "value";
+			series.dataFields.radiusValue = "value";
+			series.dataFields.category = "country";
+			series.slices.template.cornerRadius = 6;
+			series.colors.step = 3;
+			series.hiddenState.properties.endAngle = -90;
+			chart.legend = new am4charts.Legend();
+		
+		</script>		
+    </body>
+</html>

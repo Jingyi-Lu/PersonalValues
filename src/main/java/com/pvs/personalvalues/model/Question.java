@@ -3,7 +3,16 @@ package com.pvs.personalvalues.model;
 public class Question {
     int QuestionNumber;
     int QuestionaireId;
+    String QuestionType;
     String content;
+
+    public void setQuestionType(String questionType) {
+        QuestionType = questionType;
+    }
+
+    public String getQuestionType() {
+        return QuestionType;
+    }
 
     public void setQuestionNumber(int number) {
         this.QuestionNumber = number;
