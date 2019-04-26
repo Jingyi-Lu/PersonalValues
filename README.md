@@ -42,7 +42,7 @@ Details in [Statement of Work - 4 deliverables and scheduele](https://docs.googl
 
 #### Schedules
 
-<img width=600px src="/imgs/schedule_v3.png">
+<img width=600px src="/imgs/schedule_v4.jpg">
 
 ###### Tutorial Meeting
 
