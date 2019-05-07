@@ -8,8 +8,8 @@ For 30 years people have used a Personal Values Questionnaire which ranks a pers
 
 Requirements | Plan & Schedule | Register | Notes & Feedback | Test
 :-: | :-: | :-: | :-: | :-:  
-[Requirements Specification](https://drive.google.com/open?id=1LbHC7MEcsOA4sJxXfynGhxyb37FHQsyk) | [Statement of Work](https://docs.google.com/document/d/1ooCDWrFfx0ZvHPXHtY1BuWsE3_zYZ7ML1lkHwDKBcCk/edit?usp=sharing) | [Decision-making](https://docs.google.com/document/d/1aRFehZNuM0j4sutSBVvTL1uI-FrJxc7QfP1DRw_WmRQ/edit#heading=h.2el5y914njqm) | [Tutorial Meeting](https://drive.google.com/drive/folders/1SuWZbd2fqBa-uYrJy_l8QqTpDhX4gAOv) | Testing Report
-[Requirements Analysis](https://docs.google.com/document/d/16k9fWkONZbP0eksk2MveqDNhxTE1gOO-ltZ41bTG1Ns/edit) | [Project Plan](https://docs.google.com/document/d/1aSM_Y28JgmP3NHFQYPJdsWAh-M_67LlwXzOn-XBsqo8/edit?usp=sharing) | [Risk & Constraints](https://docs.google.com/document/d/1418hP-LTQGISCSi3ros_Mh794F_bORGspUqG061Lrh8/edit?usp=sharing) | [Client Meeting](https://drive.google.com/drive/folders/1SuWZbd2fqBa-uYrJy_l8QqTpDhX4gAOv) | 
+[Requirements Specification](https://drive.google.com/open?id=1LbHC7MEcsOA4sJxXfynGhxyb37FHQsyk) | [Statement of Work](https://docs.google.com/document/d/1ooCDWrFfx0ZvHPXHtY1BuWsE3_zYZ7ML1lkHwDKBcCk/edit?usp=sharing) | [Decision-making](https://drive.google.com/drive/folders/1tx81_NU2LvdlSjZffiPz1Nj4W1ZgBoKU) | [Tutorial Meeting](https://drive.google.com/drive/folders/1SuWZbd2fqBa-uYrJy_l8QqTpDhX4gAOv) | [Testing Report](https://drive.google.com/drive/folders/1m9Slb2XjItWWAMaMW0S8AJZ4iQDLkkI3)
+[Requirements Analysis](https://docs.google.com/document/d/16k9fWkONZbP0eksk2MveqDNhxTE1gOO-ltZ41bTG1Ns/edit) | [Project Plan](https://drive.google.com/drive/folders/1WLbETbxi1fxjoUQ4XU-6egHLW-yXEHwq) | [Risk & Constraints](https://drive.google.com/drive/folders/1He3ZFtNXpGIoAizsH0osSI5LZkn5gcNz) | [Client Meeting](https://drive.google.com/drive/folders/1SuWZbd2fqBa-uYrJy_l8QqTpDhX4gAOv) | 
 [User Story Map](https://drive.google.com/file/d/1kCQVtjhfbBA8LY1S-de6u56tHpq9n-My/view?usp=sharing) | [Milestones](https://github.com/Jingyi-Lu/PersonalValues/milestones) | <!--Feasibility Study--> | [Team Meeting](https://drive.google.com/drive/folders/1SuWZbd2fqBa-uYrJy_l8QqTpDhX4gAOv)|  
 [Use Case Study](https://docs.google.com/document/d/1WKxVS1nzdFC0ViUSd4GsEfIYT5_ZHJV8Czw8ascAywQ/edit?usp=sharing) | [Integration Plan](https://docs.google.com/document/d/1zKbQOOO7nb5CJoIN8BqQSw6-ZAg9yF-o_Mtb327X37U/edit) | | [Reflection](https://drive.google.com/drive/folders/1GDm3mYw9srLe_Qrmk7fHK6GC-VOoFzRB) | 
 
@@ -18,8 +18,8 @@ Requirements | Plan & Schedule | Register | Notes & Feedback | Test
 #### Design
 Prototype | Model | Diagram  
 :-: | :-: | :-:  
-[Sketches](https://drive.google.com/file/d/1oVxNT-ZKJAr0x4AjvD8LcV5J8T_PdpcE/view?usp=sharing) | Domain Model | [Flowcharts](https://drive.google.com/drive/folders/1Lye_nWow9K-iMiylLOOUG2Ycpn05ylzH)  
-[Prototype](https://drive.google.com/drive/folders/1XRmqUnzLAsuYjxC_sI6zk4LWY8zBEAUQ) | Data Model | [Sequence Diagram](https://drive.google.com/file/d/1rJo-V9He1qRchsLB_ZBrm3PPF-z_5GvS/view?usp=sharing)  
+[Sketches](https://drive.google.com/file/d/1oVxNT-ZKJAr0x4AjvD8LcV5J8T_PdpcE/view?usp=sharing) | Data Model | [Flowcharts](https://drive.google.com/drive/folders/1Lye_nWow9K-iMiylLOOUG2Ycpn05ylzH)  
+[Prototype](https://drive.google.com/drive/folders/1XRmqUnzLAsuYjxC_sI6zk4LWY8zBEAUQ) |  | [Sequence Diagram](https://drive.google.com/file/d/1rJo-V9He1qRchsLB_ZBrm3PPF-z_5GvS/view?usp=sharing)  
 
 ## Project Overview
 
@@ -42,7 +42,7 @@ Details in [Statement of Work - 4 deliverables and scheduele](https://docs.googl
 
 #### Schedules
 
-<img width=600px src="/imgs/schedule_v3.png">
+<img width=600px src="/imgs/schedule_v4.jpg">
 
 ###### Tutorial Meeting
 
