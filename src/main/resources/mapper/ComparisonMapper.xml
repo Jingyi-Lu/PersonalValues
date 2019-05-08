@@ -7,6 +7,5 @@
     <select id="GetAllDataByUserData" parameterType="java.lang.Integer" resultType="com.pvs.personalvalues.model.Question">
         select *
         from UserData
-        where #{gender} = gender,#{postcode} = postcode,#{age} = age,#{party} = party
     </select>
 </mapper>
