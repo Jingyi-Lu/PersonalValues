@@ -10,11 +10,28 @@ public class UserData {
     int con;
     int trad;
     int hed;
+    int ben;
     String gender;
     String postcode;
     String age;
     String party;
+    String country;
 
+    public void setBen(int ben) {
+        this.ben = ben;
+    }
+
+    public int getBen() {
+        return ben;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
     public void setGender(String gender) {
         this.gender = gender;

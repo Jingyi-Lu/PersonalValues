@@ -12,7 +12,7 @@
 
     <insert id="saveUserData" parameterType="com.pvs.personalvalues.model.UserData">
         insert into UserData values (
-          #{sd},#{pow},#{uni},#{ach},#{sec},#{stim},#{con},#{trad},#{hed},#{gender},#{postcode},#{age},#{party}
+          #{sd},#{pow},#{uni},#{ach},#{sec},#{stim},#{con},#{trad},#{hed},#{ben},#{gender},#{country},#{postcode},#{age},#{party}
         )
     </insert>
 </mapper>

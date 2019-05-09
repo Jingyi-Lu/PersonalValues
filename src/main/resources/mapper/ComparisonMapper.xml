@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.pvs.personalvalues.mapper.QuestionMapper">
+<mapper namespace="com.pvs.personalvalues.mapper.ComparisonMapper">
 
-    <select id="GetAllDataByUserData" parameterType="java.lang.Integer" resultType="com.pvs.personalvalues.model.Question">
+    <select id="GetAllDataByUserData" parameterType="com.pvs.personalvalues.model.UserData" resultType="com.pvs.personalvalues.model.UserData">
         select *
         from UserData
     </select>
