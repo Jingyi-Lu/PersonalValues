@@ -1,27 +1,27 @@
 package com.pvs.personalvalues.model;
 
 public class UserData {
-    int sd;
-    int pow;
-    int uni;
-    int ach;
-    int sec;
-    int stim;
-    int con;
-    int trad;
-    int hed;
-    int ben;
+    double sd;
+    double pow;
+    double uni;
+    double ach;
+    double sec;
+    double stim;
+    double con;
+    double trad;
+    double hed;
+    double ben;
     String gender;
     String postcode;
     String age;
     String party;
     String country;
 
-    public void setBen(int ben) {
+    public void setBen(double ben) {
         this.ben = ben;
     }
 
-    public int getBen() {
+    public double getBen() {
         return ben;
     }
 
@@ -41,15 +41,15 @@ public class UserData {
         this.age = age;
     }
 
-    public void setAch(int ach) {
+    public void setAch(double ach) {
         this.ach = ach;
     }
 
-    public void setCon(int con) {
+    public void setCon(double con) {
         this.con = con;
     }
 
-    public void setHed(int hed) {
+    public void setHed(double hed) {
         this.hed = hed;
     }
 
@@ -61,64 +61,64 @@ public class UserData {
         this.postcode = postcode;
     }
 
-    public void setPow(int pow) {
+    public void setPow(double pow) {
         this.pow = pow;
     }
 
-    public void setSd(int sd) {
+    public void setSd(double sd) {
         this.sd = sd;
     }
 
-    public void setSec(int sec) {
+    public void setSec(double sec) {
         this.sec = sec;
     }
 
-    public void setStim(int stim) {
+    public void setStim(double stim) {
         this.stim = stim;
     }
 
-    public void setTrad(int trad) {
+    public void setTrad(double trad) {
         this.trad = trad;
     }
 
-    public void setUni(int uni) {
+    public void setUni(double uni) {
         this.uni = uni;
     }
 
-    public int getSec() {
+    public double getSec() {
         return sec;
     }
 
-    public int getAch() {
+    public double getAch() {
         return ach;
     }
 
-    public int getCon() {
+    public double getCon() {
         return con;
     }
 
-    public int getHed() {
+    public double getHed() {
         return hed;
     }
 
 
-    public int getPow() {
+    public double getPow() {
         return pow;
     }
 
-    public int getSd() {
+    public double getSd() {
         return sd;
     }
 
-    public int getStim() {
+    public double getStim() {
         return stim;
     }
 
-    public int getTrad() {
+    public double getTrad() {
         return trad;
     }
 
-    public int getUni() {
+    public double getUni() {
         return uni;
     }
 
