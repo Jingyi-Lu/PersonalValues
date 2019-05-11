@@ -8,4 +8,15 @@
         select *
         from UserData
     </select>
+    <select id="GetMeanUserDataByUserData" parameterType="com.pvs.personalvalues.model.UserData" resultType="com.pvs.personalvalues.model.MeanUserData">
+        select *
+        from Statistics
+        where #{country} = country or #{age} = age or #{party} = party or gender = #{gender}
+    </select>
+    <update id="UpdateStatisticsByMeanUserData" parameterType="com.pvs.personalvalues.model.MeanUserData">
+        update Statistics set
+        sd = #{sd}, pow = #{pow}, uni = #{uni}, ach = #{ach}, sec = #{sec}, stim = #{stim},
+        con = #{con}, trad = #{trad}, hed = #{hed}, ben = #{ben}, count = #{count}
+        where #{country} = country or #{gender} = gender or #{age} = age or #{party} = party
+    </update>
 </mapper>

@@ -11,42 +11,37 @@ CREATE TABLE Question (
 );
 
 INSERT INTO Question VALUES (
-    1, 'SD', 1, 'Thinking up new ideas and being creative is important to her. She likes to do things in her own original way.'
+    1, 'SD', 1, 'Thinking up new ideas and being creative is important to this person. They like to do things in their own original way.'
 );
 INSERT INTO Question VALUES (
-    2, 'POW', 1, 'It is important to her to be rich. She wants to have a lot of money and expensive things.'
+    2, 'POW', 1, 'It is important to this person to be rich. They want to have a lot of money and expensive things.'
 );
 INSERT INTO Question VALUES (
-    3, 'UNI', 1, 'She thinks it is important that every person in the world be treated equally. She believes everyone should
-     have equal opportunities in life.'
+    3, 'UNI', 1, 'This person thinks it is important that everyone in the world be treated equally. They believe everyone should have equal opportunities in life.'
 );
 INSERT INTO Question VALUES (
-    4, 'ACH', 1, 'It''s important to her to show her abilities. She wants people to admire what she does.'
+    4, 'ACH', 1, 'It’s important to this person to show their abilities. They want people to admire what they do.'
 );
 INSERT INTO Question VALUES (
-    5, 'SEC', 1, 'It is important to her to live in secure
-surroundings. She avoids anything that might endanger her safety.'
+    5, 'SEC', 1, 'It is important to this person to live in secure surroundings. They avoid anything that might endanger their safety.'
 );
 INSERT INTO Question VALUES (
-    6, 'STIM', 1, 'She likes surprises and is always looking for
-new things to do. She thinks it is important to do lots of different things in life. '
+    6, 'STIM', 1, 'This person likes surprises and is always looking for new things to do. They think it is important to do lots of different things in life.'
 );
 INSERT INTO Question VALUES (
-    7, 'CON', 1, 'She believes that people should do what they''re told. She thinks people should follow rules at all times, even when no-one is watching.'
+    7, 'CON', 1, 'This person believes people should do what they’re told. They think people should follow rules at all times, even when no-one is watching.'
 );
 INSERT INTO Question VALUES (
-    8, 'UNI', 1, 'It is important to her to listen to people who are different from her. Even when she disagrees with them, she
-      still wants to understand them.'
+    8, 'UNI', 1, 'It is important to this person to listen to people who are different from them. Even when they disagree, they still want to understand others.'
 );
 INSERT INTO Question VALUES (
-    9, 'TRAD', 1, 'Having a good time is important to her. She likes to ''spoil''  herself. '
+    9, 'TRAD', 1, 'It is important to this person to be humble and modest. They try not to draw attention to themselves.'
 );
 INSERT INTO Question VALUES (
-    10, 'HED', 1, 'It is important to her to make her own decisions about what she does. She likes to be free and not depend on
-      others. '
+    10, 'HED', 1, 'Having a good time is important to this person. They like to “spoil” themselves.'
 );
 INSERT INTO Question VALUES (
-    11, 'SD', 1, 'It''s very important to her to help the people around her. She wants to care for their well-being. '
+    11, 'SD', 1, 'It is important to this person to make their own decisions about what they do. They like to be free and not depend on others.'
 );
 INSERT INTO Question VALUES (
     12, 'BEN', 1, 'Being very successful is important to her. She hopes people will recognise her achievements. '
@@ -76,8 +71,7 @@ INSERT INTO Question VALUES (
     20, 'TRAD', 1, 'She seeks every chance she can to have fun. It is important to her to do things that give her pleasure. '
 );
 INSERT INTO Question VALUES (
-    21, 'HED', 1, 'Here we briefly describe different people. Please read each description and think about how much that person
-      is or is not like you. Put an X in the box to the right that shows how much the person described is like you. '
+    21, 'HED', 1, 'This person seeks every chance they can to have fun. It is important to them to do things that give them pleasure.'
 );
 
 CREATE TABLE UserData (
@@ -637,4 +631,4 @@ INSERT INTO Statistics VALUES (
 INSERT INTO Statistics VALUES (
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, "An independent or minor party");
 INSERT INTO Statistics VALUES (
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, "Don''t know/undecided");
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, null, null, null, null, "Don't know/undecided");

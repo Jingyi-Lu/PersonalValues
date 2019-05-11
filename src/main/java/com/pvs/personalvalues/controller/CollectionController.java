@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.HashMap;
 
 @RestController
 @RequestMapping("/collect")
@@ -24,8 +25,20 @@ public class CollectionController {
     @Autowired
     ComparisonService service;
 
-    @RequestMapping("/getAverageDataByUserData")
-    public void GetAverageDataByUserData(HttpServletResponse response, HttpSession session){
+    @RequestMapping("/downloadCsv")
+    public void DownloadCsv(HttpServletResponse response, HttpServletRequest request){
+        //HashMap<String, String> map = request.getParameterMap();
+        String username = request.getParameter("username");
+        System.out.println(username);
+        String password = request.getParameter("password");
+        if (!username.equals("Mark") || !password.equals("Tech4Values")) {
+            try {
+                response.sendRedirect("http://www.valuessurvey.com.au/");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return;
+        }
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/csv");
         response.setHeader("Content-Disposition", "attachment; filename=\"data.csv\"");
