@@ -11,6 +11,7 @@ import com.pvs.personalvalues.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -24,6 +25,7 @@ public class QuestionServiceImpl implements QuestionService {
     public QuestionMsg getQuestions() {
         QuestionMsg msg = new QuestionMsg();
         List<Question> questionList = mapper.GetQuestionsByQuestionaireId(1);
+        Collections.shuffle(questionList);
         msg.setQuestions(questionList);
         msg.setError(1);
         msg.setQuestionnaireId(1);

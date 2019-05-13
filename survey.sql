@@ -44,31 +44,31 @@ INSERT INTO Question VALUES (
     11, 'SD', 1, 'It is important to this person to make their own decisions about what they do. They like to be free and not depend on others.'
 );
 INSERT INTO Question VALUES (
-    12, 'BEN', 1, 'Being very successful is important to her. She hopes people will recognise her achievements. '
+    12, 'BEN', 1, 'It’s very important to this person to help the people around them. They want to care for the well-being of others.'
 );
 INSERT INTO Question VALUES (
-    13, 'ACH', 1, 'It is important to her that the government insure her safety against all threats. She wants the state to be strong so it can defend its citizens. '
+    13, 'ACH', 1, 'Being very successful is important to this person. They hope people will recognise their achievements.'
 );
 INSERT INTO Question VALUES (
-    14, 'SEC', 1, 'She looks for adventures and likes to take risks. She wants to have an exciting life. '
+    14, 'SEC', 1, 'It is important to this person that the government insure their safety against all threats. They want the state to be strong so it can defend its citizens.'
 );
 INSERT INTO Question VALUES (
-    15, 'STIM', 1, 'It is important to her to always behave properly. She wants to avoid doing anything people would say is wrong. '
+    15, 'STIM', 1, 'This person looks for adventures and likes to take risks. They want to have an exciting life.'
 );
 INSERT INTO Question VALUES (
-    16, 'CON', 1, 'It is important to her to get respect from others. She wants people to do what she says.'
+    16, 'CON', 1, 'It is important to this person to always behave properly. They want to avoid doing anything people would say is wrong.'
 );
 INSERT INTO Question VALUES (
-    17, 'POW', 1, 'It is important to her to be loyal to her friends. She wants to devote herself to people close to her.'
+    17, 'POW', 1, 'It is important to this person to get respect from others. They want people to do what they say.'
 );
 INSERT INTO Question VALUES (
-    18, 'BEN', 1, 'She strongly believes that people should care for nature. Looking after the environment is important to her. '
+    18, 'BEN', 1, 'It is important to this person to be loyal to their friends. They want to devote themselves to people close to them.'
 );
 INSERT INTO Question VALUES (
-    19, 'UNI', 1, 'Tradition is important to her. She tries to follow the customs handed down by her religion or her family.'
+    19, 'UNI', 1, 'This person strongly believes that people should care for nature. Looking after the environment is important to them.'
 );
 INSERT INTO Question VALUES (
-    20, 'TRAD', 1, 'She seeks every chance she can to have fun. It is important to her to do things that give her pleasure. '
+    20, 'TRAD', 1, 'Tradition is important to this person. They try to follow the customs handed down by their religion or family.'
 );
 INSERT INTO Question VALUES (
     21, 'HED', 1, 'This person seeks every chance they can to have fun. It is important to them to do things that give them pleasure.'
