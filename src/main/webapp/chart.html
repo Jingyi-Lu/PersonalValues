@@ -4,25 +4,65 @@
     <head>
         <meta charset="utf-8">	<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+		<!-- Add icon library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
         <style>
 		#chartdiv {
-  			width: 55%;
+			top: 10%;
+  			width: 50%;
   			height: 500px;
 			float: left;
+			left:-1%;
 		}
 		#chartdiv2 {
+			top: 10%;
 			width: 45%;
 			height: 507px;
 			float: right;
 		}
-			
+		#legenddiv {
+			left: 1%;
+			top: 10%;
+			width: 5%;
+			height: 500px;
+			float: left;
+		}
+		#link {
+			float:right;
+			margin-top:5%;
+			margin-right:35%;
+		}
+		#postQuestion {
+			margin: 1% 0 0 76%;
+			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+		}
+
+		.hidden_div {
+			margin: 0;
+			position: fixed;
+			overflow: auto;
+			top: 10%;;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 999;
+			outline: 0;
+			opacity: 0.5;
+			background: #000;
+			display:none;
+		}
 			
 		body {
+			background-image: url("WechatIMG30.jpeg");
+			background-size: cover;
 			height: 100%;
 			width: 100%;
 			margin: 0;
 			padding: 0;
-			
 		}
 			
 		.navigator ul{
@@ -35,7 +75,7 @@
 			overflow: hidden;
 	
 		}
-		
+
 		.navigator li{
 			float: left;
 			display: block;
@@ -50,21 +90,94 @@
 			font-size: 30px;
 			margin-top: 1%;
 			margin-bottom: 1%;
-			
 		}
-			
-		.container{
+
+		.TEST{
+			background-color: #FFFFFF;
 			position: absolute;
-			padding: 0;
-			margin: 0;
-			background-color: rgba(231,220,220,0.9);
 			height: 70%;
 			width: 80%;
 			left: 10%;
 			top: 15%;
-			display: none;
-			
+			overflow: auto;
+			/*display: none;*/
 		}
+		.selectChart{
+			background-color: #FFFFFF;
+			position: absolute;
+			height: 10%;
+			width: 100%;
+			/*left: 10%;*/
+			top: 2%;
+			/*overflow: auto;*/
+		}
+
+
+		.main{
+			width:80%;
+			height:100%;
+			margin:0 auto;
+		}
+		.left{
+			width:45%;
+			height:900px;
+			float:left;
+		}
+		.middle{
+			width:10%;
+			height:900px;
+			float:left;
+		}
+		.right{
+			width:45%;
+			height:900px;
+			float:right;
+		}
+		.center-fit {
+			/*left: 20%;*/
+			max-width: 100%;
+			max-height: 100%;
+			margin: auto;
+			vertical-align:middle;
+		}
+
+		.intro {
+			/*margin-left: 2%;*/
+			/*left: 5%;*/
+			text-align: left;
+			float: left;
+			width: 73%;
+			line-height : 100%;
+			margin-bottom:5%;
+			margin-left:5%;
+
+		}
+		.photo{
+			margin-bottom:3%;
+			top: 2%;
+			float:left;
+			width:20%;
+			/*margin-bottom: 20%;*/
+		}
+		.white{
+			width:100%;
+			height : 15%;
+		}
+		.iconcontainer.first, .iconcontainer.second{
+			display: inline-block;
+			width:50%;
+			height:50%;
+		}
+
+		.iconcontainer img {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+			width: 50%;
+			height: 100%;
+		}
+
+
         </style>	
 		<script src="https://www.amcharts.com/lib/4/core.js"></script>
 		<script src="https://www.amcharts.com/lib/4/charts.js"></script>
@@ -81,53 +194,63 @@
   			<li><a href="#about">About us</a></li>
 			</ul>
 		</div>
+
+
+
+		<div class="TEST">
+
+			<div  class="selectChart">
+			<form style="overflow: auto; height: 80%;" id="postQuestion">
+			Which chart do you want to compare with?
+			<select id="country" name="country">
+			<option value="Australia" selected="selected" id="Australia">Australia</option>
+			<option value="Afghanistan">Afghanistan</option>
+			</select><br>
+			</form>
+			</div>
+
+			<div id="legenddiv"></div>
 		<div id="chartdiv"></div>
 
 		<!--<img width="43%" style="float: right;margin-top: 10%" src="../WechatIMG96.jpeg">-->
-
-		
 		<script>
-			var temp1 = [];
-			var temp2 = [];
-			var temp3 = [];	
-			var temp4 = [];
-			var temp5 = [];
-			var temp6 = [];
-			var temp7 = [];
-			var temp8 = [];
-			var temp9 = [];
+			var temp1 = [];var temp2 = [];var temp3 = [];var temp4 = [];var temp5 = [];
+			var temp6 = [];var temp7 = [];var temp8 = [];var temp9 = [];var temp10 = [];
 	
 			var value = window.sessionStorage.name;
 			var getValue = value.split("-");
 			var answerList = getValue.slice(0,getValue.length/2);
 			var typeList = getValue.slice(getValue.length/2,getValue.length+1);
 			for (i=0;i<answerList.length;i++) {
-				if(typeList[i] ==  "SD"){
+				if(typeList[i] ==  "UNI"){
 					temp1.push(answerList[i]);
 				}
-				if(typeList[i] ==  "POW"){
-					temp2.push(answerList[i]);
-				}
-				if(typeList[i] ==  "UNI"){
+				// if(typeList[i] ==  "BEN"){
+				// 	temp2.push(answerList[i]);
+				// }
+				if(typeList[i] ==  "TRAD"){
 					temp3.push(answerList[i]);
 				}
-			    if(typeList[i] ==  "ACH"){
+			    if(typeList[i] ==  "CON"){
 					temp4.push(answerList[i]);
 				}
 				if(typeList[i] ==  "SEC"){
 					temp5.push(answerList[i]);
 				}
-				if(typeList[i] ==  "STIM"){
+				if(typeList[i] ==  "POW"){
 					temp6.push(answerList[i]);
 				}
-				if(typeList[i] ==  "CON"){
+				if(typeList[i] ==  "ACH"){
 					temp7.push(answerList[i]);
 				}
-				if(typeList[i] ==  "TRAD"){
+				if(typeList[i] ==  "HED"){
 					temp8.push(answerList[i]);
 				}
-				if(typeList[i] ==  "HED"){
+				if(typeList[i] ==  "STIM"){
 					temp9.push(answerList[i]);
+				}
+				if(typeList[i] ==  "SD"){
+					temp10.push(answerList[i]);
 				}
 			}
 			
@@ -138,63 +261,105 @@
     		}
     			return s;
 			}
-			
-			
 			// Themes begin
 			am4core.useTheme(am4themes_animated);
+
 			// Themes end
 			// Create chart
 			var chart = am4core.create("chartdiv", am4charts.PieChart);
         	chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-       		
+			// chart.radius = am4core.percent(80);
+
 			chart.data = [
 				{
-					country: "SD",
-					value: sum(temp1)/temp1.length,
-          		},
-         		{
-    				country: "POW",
-    				value: sum(temp2)/temp2.length,
-  				},
-  				{
 					country: "UNI",
-    				value: sum(temp3)/temp3.length,
-  				},
-  				{
-					country: "ACH",
-    				value: sum(temp4)/temp4.length,
-  				},
-  				{
-					country: "SEC",
-    				value: sum(temp5)/temp5.length,
-  				},
-  				{
-					country: "STIM",
-    				value: sum(temp6)/temp6.length,
-  				},
-  				{
-					country: "CON",
-    				value: sum(temp7)/temp7.length,
-  				},
-  				{
+					value: sum(temp1)/temp1.length,
+					description: "Understanding, appreciation, tolerance and protection \n for the welfare of all people and for nature.",
+					fullname:"UNIVERSALISM",
+					value2: 2,
+				},
+				// {
+				// country: "BEN",
+				// value: sum(temp2)/temp2.length,
+				// description: "Preservation and enhancement of the \n welfare of people with whom one is in \m frequent personal contact.
+				// 	welfare of people with whom one is in
+				// frequent personal contact.",
+				// fullname:"BENEVOLENCE",
+				// },
+				{
 					country: "TRAD",
-    				value: sum(temp8)/temp8.length,
-  				},
-  				{
+					value: sum(temp3)/temp3.length,
+					description: "Respect, commitment and acceptance of \n the customs and ideas that traditional \n culture or religion provide the self.",
+					fullname:"TRADITION",
+					value2: 2,
+				},
+				{
+					country: "CON",
+					value: sum(temp4)/temp4.length,
+					description: "Restraint of actions, inclinations and \n impulses likely to upset or harm others \n and violate social expectations or norms. ",
+					fullname:"CONFORMITY",
+					value2: 2,
+				},
+				{
+					country: "SEC",
+					value: sum(temp5)/temp5.length,
+					description: "Safety, harmony, and stability of society, of relationships, and of self.",
+					fullname:"SECURITY",
+					value2: 2,
+				},
+				{
+					country: "POW",
+					value: sum(temp6)/temp6.length,
+					description: "Social status and prestige, control or \n dominance over people and resources.",
+					fullname:"POWER",
+					value2: 2,
+				},
+				{
+					country: "ACH",
+					value: sum(temp7)/temp7.length,
+					description: "Personal success through demonstrating \n competence according to social standards. ",
+					fullname:"ACHIEVEMENT",
+					value2: 2,
+				},
+				{
 					country: "HED",
-    				value: sum(temp9)/temp9.length,
-  				},
+					value: sum(temp8)/temp8.length,
+					description: "Pleasure and sensuous gratification for oneself. ",
+					fullname:"HEDONISM",
+					value2: 2,
+				},
+				{
+					country: "STIM",
+					value: sum(temp9)/temp9.length,
+					description: "Excitement, novelty and challenge in life.",
+					fullname:"STIMULATION",
+					value2: 2,
+				},
+				{
+					country: "SD",
+					value: sum(temp10)/temp10.length,
+					description: "Independent thought and action—choosing, creating, exploring. ",
+					fullname:"SELF-DIRECTION",
+					value2: 2,
+				},
 			];
-			
+
+			var colorSet = new am4core.ColorSet();
+			colorSet.list = ["#82B241", "#4E7A35", "#3DAEE4", "#6878D8", "#0473BA","#872784","#D62129","#F158A1","#F26F2C","#F7CF25"].map(function(color) {
+				return new am4core.color(color);
+			});
+
 			var series = chart.series.push(new am4charts.PieSeries());
-			series.dataFields.value = "value";
+			series.dataFields.value = "value2";
 			series.dataFields.radiusValue = "value";
 			series.dataFields.category = "country";
 			series.slices.template.cornerRadius = 6;
 			series.colors.step = 3;
 			series.hiddenState.properties.endAngle = -90;
 
-			series.slices.template.tooltipText = "Value Category: {category}\nYour Value: {value.percent.formatNumber('#.0')}% \n Average Value: {radiusValue}" ;
+			series.colors = colorSet;
+
+			series.slices.template.tooltipText = "Value Category: {fullname}\nYour Value: {value.percent.formatNumber('#.0')}% \n Average Value: {radiusValue} \n Description: {description}" ;
 			series.tooltip.pointerOrientation = "vertical";
 			// series.tooltip.label.interactionsEnabled = true;
 
@@ -222,12 +387,53 @@
 			marker.strokeWidth = 2;
 			marker.strokeOpacity = 1;
 			marker.stroke = am4core.color("#ccc");
-		
+			series.labels.template.text = "{category}: {radiusValue}";
+
+			var legendContainer = am4core.create("legenddiv", am4core.Container);
+			legendContainer.width = am4core.percent(100);
+			legendContainer.height = am4core.percent(100);
+
+			chart.legend.parent = legendContainer;
+
+
 		</script>
+
 
 		<div id="chartdiv2"></div>
 
 		<script>
+			$(document).ready(function() {
+				//for question type
+				var typelist = [];
+				//collect all
+				var allchoose = [];
+				//for random question
+				var qestionArray = [];
+
+				htmlobj = $.ajax({
+					url: "http://www.valuessurvey.com.au/compare/getAverageDataByUserData",
+					type: "POST",
+					async: false,
+					success: function (result) {
+						// if ((typeof result == 'object') && result.constructor == Object) {
+						// 	obj = result;
+						// } else {
+						// 	obj = eval("(" + result + ")");
+						// }
+						console.log(obj);
+						var jsonStr = JSON.parse(result.json);
+						alert(jsonStr.name);
+
+
+						// console.log(obj.questions[1]);
+						// var count = obj.questions.length - 1;
+						// for (i = 0; i < count; i++) {
+						// 	$("#questions").append("<p class='" + obj.questions[i].questionType + "'>" + obj.questions[i].content + "</p>");
+						// }
+					}
+				});
+			});
+
 			var temp1 = [];
 			var temp2 = [];
 			var temp3 = [];
@@ -237,38 +443,42 @@
 			var temp7 = [];
 			var temp8 = [];
 			var temp9 = [];
+			var temp10 = [];
 
 			var value = window.sessionStorage.name;
 			var getValue = value.split("-");
 			var answerList = getValue.slice(0,getValue.length/2);
 			var typeList = getValue.slice(getValue.length/2,getValue.length+1);
 			for (i=0;i<answerList.length;i++) {
-				if(typeList[i] ==  "SD"){
+				if(typeList[i] ==  "UNI"){
 					temp1.push(answerList[i]);
 				}
-				if(typeList[i] ==  "POW"){
-					temp2.push(answerList[i]);
-				}
-				if(typeList[i] ==  "UNI"){
+				// if(typeList[i] ==  "BEN"){
+				// 	temp2.push(answerList[i]);
+				// }
+				if(typeList[i] ==  "TRAD"){
 					temp3.push(answerList[i]);
 				}
-				if(typeList[i] ==  "ACH"){
+				if(typeList[i] ==  "CON"){
 					temp4.push(answerList[i]);
 				}
 				if(typeList[i] ==  "SEC"){
 					temp5.push(answerList[i]);
 				}
-				if(typeList[i] ==  "STIM"){
+				if(typeList[i] ==  "POW"){
 					temp6.push(answerList[i]);
 				}
-				if(typeList[i] ==  "CON"){
+				if(typeList[i] ==  "ACH"){
 					temp7.push(answerList[i]);
 				}
-				if(typeList[i] ==  "TRAD"){
+				if(typeList[i] ==  "HED"){
 					temp8.push(answerList[i]);
 				}
-				if(typeList[i] ==  "HED"){
+				if(typeList[i] ==  "STIM"){
 					temp9.push(answerList[i]);
+				}
+				if(typeList[i] ==  "SD"){
+					temp10.push(answerList[i]);
 				}
 			}
 
@@ -280,7 +490,6 @@
 				return s;
 			}
 
-
 			// Themes begin
 			am4core.useTheme(am4themes_animated);
 			// Themes end
@@ -290,60 +499,95 @@
 
 			chart.data = [
 				{
-					country: "SD",
-					value: sum(temp1)/temp1.length,
-				},
-				{
-					country: "POW",
-					value: sum(temp2)/temp2.length,
-				},
-				{
 					country: "UNI",
+					value: sum(temp1)/temp1.length,
+					description: "Understanding, appreciation, tolerance and protection \n for the welfare of all people and for nature.",
+					fullname:"UNIVERSALISM",
+					value2: 2,
+				},
+				// {
+				// country: "BEN",
+				// value: sum(temp2)/temp2.length,
+				// description: "Preservation and enhancement of the \n welfare of people with whom one is in \m frequent personal contact.
+			// 	welfare of people with whom one is in
+			// frequent personal contact.",
+				// fullname:"BENEVOLENCE",
+				// },
+				{
+					country: "TRAD",
 					value: sum(temp3)/temp3.length,
+					description: "Respect, commitment and acceptance of \n the customs and ideas that traditional \n culture or religion provide the self.",
+					fullname:"TRADITION",
+					value2: 2,
 				},
 				{
-					country: "ACH",
+					country: "CON",
 					value: sum(temp4)/temp4.length,
+					description: "Restraint of actions, inclinations and \n impulses likely to upset or harm others \n and violate social expectations or norms. ",
+					fullname:"CONFORMITY",
+					value2: 2,
 				},
 				{
 					country: "SEC",
 					value: sum(temp5)/temp5.length,
+					description: "Safety, harmony, and stability of society, of relationships, and of self.",
+					fullname:"SECURITY",
+					value2: 2,
 				},
 				{
-					country: "STIM",
+					country: "POW",
 					value: sum(temp6)/temp6.length,
+					description: "Social status and prestige, control or \n dominance over people and resources.",
+					fullname:"POWER",
+					value2: 2,
 				},
 				{
-					country: "CON",
+					country: "ACH",
 					value: sum(temp7)/temp7.length,
-				},
-				{
-					country: "TRAD",
-					value: sum(temp8)/temp8.length,
+					description: "Personal success through demonstrating \n competence according to social standards. ",
+					fullname:"ACHIEVEMENT",
+					value2: 2,
 				},
 				{
 					country: "HED",
+					value: sum(temp8)/temp8.length,
+					description: "Pleasure and sensuous gratification for oneself. ",
+					fullname:"HEDONISM",
+					value2: 2,
+				},
+				{
+					country: "STIM",
 					value: sum(temp9)/temp9.length,
+					description: "Excitement, novelty and challenge in life.",
+					fullname:"STIMULATION",
+					value2: 2,
+				},
+				{
+					country: "SD",
+					value: sum(temp10)/temp10.length,
+					description: "Independent thought and action—choosing, creating, exploring. ",
+					fullname:"SELF-DIRECTION",
+					value2: 2,
 				},
 			];
+			var colorSet = new am4core.ColorSet();
+			colorSet.list = ["#82B241", "#4E7A35", "#3DAEE4", "#6878D8", "#0473BA","#872784","#D62129","#F158A1","#F26F2C","#F7CF25"].map(function(color) {
+				return new am4core.color(color);
+			});
 
 			var series = chart.series.push(new am4charts.PieSeries());
-			series.dataFields.value = "value";
+			series.dataFields.value = "value2";
 			series.dataFields.radiusValue = "value";
 			series.dataFields.category = "country";
 			series.slices.template.cornerRadius = 6;
 			series.colors.step = 3;
 			series.hiddenState.properties.endAngle = -90;
 
-			series.slices.template.tooltipText = "Value Category: {category}\nYour Value: {value.percent.formatNumber('#.0')}% \n Average Value{radiusValue}" ;
+			series.slices.template.tooltipText = "Value Category: {fullname}\nYour Value: {value.percent.formatNumber('#.0')}% \n Average Value{radiusValue} \n Description: {description}" ;
 			series.tooltip.pointerOrientation = "vertical";
 			series.tooltip.label.interactionsEnabled = true;
 
-			// chart.legend = new am4charts.Legend();
-			// chart.legend.position = "left";
-			// chart.legend.valign = "middle";
-			// chart.legend.align = "50";
-			// series.legendSettings.valueText = "{valueY.close}";
+			series.colors = colorSet;
 
 			var topContainer = chart.chartContainer.createChild(am4core.Container);
 			topContainer.layout = "absolute";
@@ -357,8 +601,151 @@
 			axisTitle.align = "middle";
 			axisTitle.paddingLeft = 50 ;
 
+			series.slices.template.interactionsEnabled = true;
+			series.slices.template.events.on(
+					"hit",
+					ev => {
+						var item = ev.target.dataItem.component.tooltipDataItem.dataContext;
+						alert("line clicked on: " + item.country + ": " + item.marketing);
+					},
+					this
+			);
+
+			series.labels.template.text = "{category}: {radiusValue}";
+
+
+
 
 		</script>
-		<img width="80%" style="margin-left: 9%;margin-top: 8%;margin-bottom: 5%;" src="WechatIMG94.png">
+        <!--<div class="TEST">-->
+		<div class="hidden_div" id="hiddenDivId"></div>
+		<div id="link">
+
+		<div class="addthis_inline_share_toolbox_jlq2">  </div>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cd4fb38aeca67fc"></script>
+		</div>
+
+
+			<div class="main">
+				<div class="left">
+					<div class="photo">
+						<img class='center-fit' src="colours_image/green.png" >
+					</div>
+					<div class="intro" >
+						 <p> <font style="font-family: WildWest;  font-size: large" color="#82B241"> Universalism </font><br>
+						<font style="font-family: Verdana; ">Understanding, appreciation, tolerance and protection
+							for the welfare of all people and for nature.</font>
+					    </p>
+					</div>
+
+					<div class="white"></div>
+
+					<div class="photo">
+						<img class='center-fit' src="colours_image/darkgreen.png" >
+					</div>
+					<div class="intro">
+						 <p> <font style="font-family: WildWest;  font-size: large; " color="#4E7A35"> Benevolence </font><br>
+						     <font style="font-family: Verdana; ">Preservation and enhancement of the welfare of people with whom one is in frequent personal contact.
+								  	welfare of people with whom one is in
+								  frequent personal contact.</font>
+					    </p>
+					</div>
+
+					<div class="white"></div>
+
+					<div class="photo">
+						<img class='center-fit' src="colours_image/blue.png" >
+					</div>
+					<div class="intro">
+						 <p> <font style="font-family: WildWest;  font-size: large; " color="#3DAEE4"> Tradition </font><br>
+						<font style="font-family: Verdana; ">Respect, commitment and acceptance of the customs and ideas that traditional culture or religion provide the self.</font>
+					    </p>
+					</div>
+					<div class="white"></div>
+
+					<div class="photo">
+						<img class='center-fit' src="colours_image/lightpurple.png" >
+					</div>
+					<div class="intro">
+						 <p> <font style="font-family: WildWest;  font-size: large; " color="#6878D8"> Conformity </font><br>
+						<font style="font-family: Verdana; ">Restraint of actions, inclinations and
+							impulses likely to upset or harm others and violate social expectations or norms..</font>
+					</p>
+					</div>
+					<div class="white"></div>
+
+					<div class="photo">
+						<img class='center-fit' src="colours_image/darkblue.png" >
+					</div>
+					<div class="intro">
+						  <p> <font style="font-family: WildWest;  font-size: large; " color="#0473BA"> Security </font><br>
+						<font style="font-family: Verdana; ">Safety, harmony, and stability of society, of relationships, and of self.</font>
+					</p>
+					</div>
+
+				</div>
+
+
+				<div class="middle"></div>
+
+
+				<div class="right">
+					<div class="photo">
+						<img class='center-fit' src="colours_image/purple.png" >
+					</div>
+					<div class="intro" >
+						 <p> <font style="font-family: WildWest;  font-size: large" color="#872784"> Power </font><br>
+						<font style="font-family: Verdana; ">Social status and prestige, control or
+							dominance over people and resources.</font>
+					</p>
+					</div>
+
+					<div class="white"></div>
+
+					<div class="photo">
+						<img class='center-fit' src="colours_image/red.png" >
+					</div>
+					<div class="intro">
+						 <p> <font style="font-family: WildWest;  font-size: large; " color="#D62129"> Achievement </font><br>
+						<font style="font-family: Verdana; ">Personal success through demonstrating competence according to social standards.
+						</font>
+					</p>
+					</div>
+
+					<div class="white"></div>
+
+					<div class="photo">
+						<img class='center-fit' src="colours_image/pink.png" >
+					</div>
+					<div class="intro">
+						 <p> <font style="font-family: WildWest;  font-size: large; " color="#F158A1"> Hedonism </font><br>
+						<font style="font-family: Verdana; ">Pleasure and sensuous gratification for oneself. </font>
+					</p>
+					</div>
+					<div class="white"></div>
+
+					<div class="photo">
+						<img class='center-fit' src="colours_image/orange.png" >
+					</div>
+					<div class="intro">
+						 <p> <font style="font-family: WildWest;  font-size: large; " color="#F26F2C"> Stimulation </font><br>
+						<font style="font-family: Verdana; ">Excitement, novelty and challenge in life.</font>
+					</p>
+					</div>
+					<div class="white"></div>
+
+					<div class="photo">
+						<img class='center-fit' src="colours_image/yellow.png" >
+					</div>
+					<div class="intro">
+						  <p> <font style="font-family: WildWest;  font-size: large; " color="#F7CF25"> Self-direction </font><br>
+						<font style="font-family: Verdana; ">Independent thought and action—choosing, creating, exploring.</font>
+					</p>
+					</div>
+				</div>
+			</div>
+
+		<!--<img width="80%" style="margin-left: 9%;margin-top: 8%;margin-bottom: 5%;" src="WechatIMG94.png">-->
+		</div>
     </body>
 </html>
