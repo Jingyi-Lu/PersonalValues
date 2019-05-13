@@ -1,24 +1,25 @@
 package com.pvs.personalvalues.model.msg;
 
-import com.pvs.personalvalues.model.UserData;
+import com.pvs.personalvalues.model.MeanUserData;
+import java.util.List;
 
 public class ComparisonMsg {
     int error;
-    UserData data;
+    List<MeanUserData> data;
 
     public void setError(int error) {
         this.error = error;
     }
 
-    public void setData(UserData data) {
+    public void setData(List<MeanUserData> data) {
         this.data = data;
+    }
+
+    public List<MeanUserData> getData() {
+        return data;
     }
 
     public int getError() {
         return error;
-    }
-
-    public UserData getData() {
-        return data;
     }
 }

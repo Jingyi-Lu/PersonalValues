@@ -11,11 +11,19 @@ public class MeanUserData {
     double trad;
     double hed;
     double ben;
+    double count;
     String gender;
     String postcode;
     String age;
     String party;
     String country;
+    public void setCount(double count) {
+        this.count = count;
+    }
+
+    public double getCount() {
+        return count;
+    }
 
     public void setCountry(String country) {
         this.country = country;

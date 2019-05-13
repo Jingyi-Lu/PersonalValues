@@ -108,7 +108,7 @@
 		
 		.main-questionPage .topAnswer {
 			margin: 6% 6% 0 10%;
-			width: 82%;
+			width: 80%;
 			padding: 30px 0 30px 0;
 			list-style: none;
 			
@@ -116,10 +116,11 @@
 		
 		.main-questionPage .topAnswer li {
 			float: left;
-			width: 15%;
-			font-size: 15px;
+			width: 16.666%;
+			font-size: 20px;
+			text-align: center;
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-			color: rgba(77,77,77,1.00);
+			color: black;
 		}
 		
 		.main-questionPage #answerBar {
@@ -632,9 +633,11 @@
 			var index = allchoose[count-2];
 			$(".main-questionPage #answerBar li").css("height","15px");
 			$(".main-questionPage #answerBar li").css("margin","0 auto");
+		    $(".main-questionPage .topAnswer li").css("visibility","hidden");
 			$($(".main-questionPage #answerBar li")[index]).css("height","35px");
 			$($(".main-questionPage #answerBar li")[index]).css("margin-top","-10px");
 	    	$($(".main-questionPage #answerBar li")[index]).addClass("selected");
+	    	$($(".main-questionPage .topAnswer li")[index]).css("visibility","visible");
 			$(".main-questionPage .progressBar img").eq(-1).remove();
 			count -= 1
 		}else{
@@ -668,7 +671,7 @@
 	});
 	$("#Home").click(function(){
 		if(count>=1){
-			var r = confirm("Leave site? changes made may not be saved.");
+			var r = confirm("Leave survey? Changes made may not be saved.");
 			if (r==true){
 				window.location.reload();			
 			}
@@ -697,17 +700,16 @@
 		for(i=0;i<numOfQuestion;i++){
 			row[typelist[i]] =  allchoose[i] + "";
 		}
-		var country = $('select[name="country"]:checked').val();
-		row["country"] = country;
 		var gender = $('input[name="gender"]:checked').val();
     	row["gender"] = gender;
+        var country = $("#country").find("option:selected").text();
+		row["country"] = country;
 		var age = $('input[name="age"]:checked').val();
 		row["age"] =  age;
 		var party= $('input[name="party"]:checked').val();
 		row["party"] = party;
 		var postcode = $("#postcode").val();
 		row["postcode"] =  postcode;
-		console.log(row)
 		var json = JSON.stringify(row);
 		console.log(json);
 		//todo
@@ -761,12 +763,12 @@
 		</div>
 
 		<ul class="topAnswer">
-			<li style="margin-left: 1.5%">Not like me at all</li>
-			<li style="margin-left: 3.5%">Not like me</li>
+			<li>Not like me at all</li>
+			<li>Not like me</li>
 			<li>A little like me</li>
 			<li>Moderately like me</li>
-			<li style="margin-left: 4.5%">Like me</li>
-			<li style="margin-left: -2%">Very much like Me</li>
+			<li>Like me</li>
+			<li >Very much like Me</li>
 		</ul>
 
 		<ul id="answerBar">

@@ -17,10 +17,26 @@ public class ComparisionServiceImpl implements ComparisonService {
     @Autowired
     ComparisonMapper mapper;
     @Override
-    public UserData GetAverageDataByUserData(UserData data) {
-        List<UserData> list = mapper.GetAllDataByUserData(data);
-        MeanUserData mean = new MeanUserData();
+    public List<MeanUserData> GetAverageDataByUserData(UserData data) {
+        List<MeanUserData> list = mapper.GetMeanUserDataByUserData(data);
+
+        System.out.println(list.size());
         for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getCount() != 0) {
+                list.get(i).setAch(list.get(i).getAch() / list.get(i).getCount());
+                list.get(i).setCon(list.get(i).getCon() / list.get(i).getCount());
+                list.get(i).setHed(list.get(i).getHed() / list.get(i).getCount());
+                list.get(i).setPow(list.get(i).getPow() / list.get(i).getCount());
+                list.get(i).setSec(list.get(i).getSec() / list.get(i).getCount());
+                list.get(i).setStim(list.get(i).getStim() / list.get(i).getCount());
+                list.get(i).setSd(list.get(i).getSd() / list.get(i).getCount());
+                list.get(i).setTrad(list.get(i).getTrad() / list.get(i).getCount());
+                list.get(i).setUni(list.get(i).getUni() / list.get(i).getCount());
+                list.get(i).setBen(list.get(i).getBen() / list.get(i).getCount());
+
+            }
+        }
+        /**for (int i = 0; i < list.size(); i++) {
             mean.setAch(mean.getAch() + list.get(i).getAch());
             mean.setCon(mean.getCon() + list.get(i).getCon());
             mean.setHed(mean.getHed() + list.get(i).getHed());
@@ -40,7 +56,8 @@ public class ComparisionServiceImpl implements ComparisonService {
         mean.setSd(mean.getSd() / list.size());
         mean.setTrad(mean.getTrad() / list.size());
         mean.setUni(mean.getUni() / list.size());
-        return mapper.GetAllDataByUserData(data).get(0);
+        return mapper.GetAllDataByUserData(data).get(0);**/
+        return list;
     }
 
     @Override
