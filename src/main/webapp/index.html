@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Personal Values Survey</title>
+	<link rel="icon" href="PVS_circle.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -55,23 +56,25 @@
 		
 		.main-HomePage #HomePage-description{
 			text-align: center;
-			font-size: 30px;
+			font-size: 25px;
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			color: white;
+			margin-left: 10%;
+			margin-right: 10%;
 		}
 		
 		.main-HomePage #HomePage-button{
-			background-color: rgba(131,131,131,0.5);
+			background-color: rgba(131,131,131,0.8);
 			color: rgba(255,255,255,0.8);
-			font-size: 35px;
+			font-size: 30px;
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			border:none;
-			margin-left: 45%;
+			margin-left: 35%;
 			margin-top: 8%;
-			width: 150px;
-			height: 150px;
+			width: 30%;
+			height: 100px;
 			line-height: 20%;
-			border-radius: 50%;
+			border-radius: 10%;
 			cursor: pointer;
 				
 		}
@@ -120,7 +123,7 @@
 			font-size: 20px;
 			text-align: center;
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-			color: black;
+			color: darkgray;
 		}
 		
 		.main-questionPage #answerBar {
@@ -305,6 +308,27 @@
 		.main-questionPage .darkBlue #VeryLikeMe {
 			background-color: #0970b3;
 		}
+		
+		
+		.main-questionPage .darkPurple #NotLikeMeAtAll {
+			background-color: #aeb8fb;
+		}
+		.main-questionPage .darkPurple #NotLikeMe {
+			background-color: #a1acf6;
+		}
+		.main-questionPage .darkPurple #ALittleLikeMe {
+			background-color: #96a2f4;
+		}
+		.main-questionPage .darkPurple #ModeratelyLikeMe{
+			background-color: #8794ec;
+		}
+		.main-questionPage .darkPurple #LikeMe {
+			background-color: #7583e2;
+		}
+		.main-questionPage .darkPurple #VeryLikeMe {
+			background-color: #6675da;
+		}
+		
 		.main-questionPage .progressBar {
 			position: absolute;
 			bottom: 70px;
@@ -319,6 +343,12 @@
 			right: 20px;
 			bottom: 20px;
 		}
+		
+		.main-questionPage #questionPage-NextButton:hover {
+            color:dimgray;
+			bottom:19px;
+		}
+		
 		.main-questionPage #questionPage-BackButton {
 			position: absolute;
 			background-color: #ffffff;
@@ -327,7 +357,15 @@
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			left: 20px;
 			bottom: 20px;
+
 		}
+		
+		.main-questionPage #questionPage-BackButton:hover {
+            color:dimgray;
+			bottom:19px;
+		}
+		
+		
 		.red {
 			display: none;
 		}
@@ -350,6 +388,9 @@
 			display: none;
 		}
 		.pink {
+			display: none;
+		}
+		.darkPurple {
 			display: none;
 		}
 		.main-PostPage {
@@ -393,6 +434,8 @@
 	</style>
 	<script>
 	$(document).ready(function(){
+		
+		
 		//for question type
 		var typelist = [];
 		//collect all
@@ -411,7 +454,7 @@
                 }
                 console.log(obj.questions[1]);
                 var count = obj.questions.length - 1;
-                for (i=0;i<count;i++) {
+                for (i=0;i<=count;i++) {
                     $("#questions").append("<p class='"+obj.questions[i].questionType+"'>"+obj.questions[i].content+"</p>");
                 }
             }
@@ -420,67 +463,61 @@
 		for (i=0;i<numOfQuestion;i++) {
 			qestionArray[i] = i;
 		}
-		//for random color
-		var template = [3,2,1,0]
-		//shuffle a array
-		function shuffle(arr) {
-		var length = arr.length,
-			randomIndex,
-			temp;
-		while (length) {
-			randomIndex = Math.floor(Math.random() * (length--));
-			temp = arr[randomIndex];
-			arr[randomIndex] = arr[length];
-	    	arr[length] = temp
-			}
-	  		return arr;
-		}
+
 		var count = 0
 		var newArray = qestionArray;
-		var colorArray = shuffle(template);
   		$("#HomePage-button").click(function(){
+	
 			
+			
+			window.onbeforeunload = function(e) {
+    		(e || window.event).returnValue = 'Leave site？';
+			}
+
 			count = 1
     		$(".main-HomePage").slideToggle();
 			$(".main-questionPage p").css("display","none");
 			$(".main-questionPage").css("display","block");
 	        var first = newArray[0];
 			$($(".main-questionPage p")[first]).css("display","block");
-            var colorFirst = colorArray[0];
 			if($($(".main-questionPage p")[first]).attr("class") == "SD"){
 			$(".main-questionPage #answerBar").attr("class","yellow");
 			$(".main-questionPage #answerBar").css("display","block");
 			$(".main-questionPage").css("background-color","#FFFFFF")
 			} if ($($(".main-questionPage p")[first]).attr("class") == "POW") {
-			$(".main-questionPage #answerBar").attr("class","red");
-			$(".main-questionPage #answerBar").css("display","block");
-			$(".main-questionPage").css("background-color","#FFFFFF")
-			} if ($($(".main-questionPage p")[first]).attr("class") == "UNI") {
-			$(".main-questionPage #answerBar").attr("class","blue");
-			$(".main-questionPage #answerBar").css("display","block");
-			$(".main-questionPage").css("background-color","#FFFFFF")
-			} if($($(".main-questionPage p")[first]).attr("class") == "ACH") {
-			$(".main-questionPage #answerBar").attr("class","green");
-			$(".main-questionPage #answerBar").css("display","block");
-			$(".main-questionPage").css("background-color","#FFFFFF")
-			} if($($(".main-questionPage p")[first]).attr("class") == "SEC") {
-			$(".main-questionPage #answerBar").attr("class","orange");
-			$(".main-questionPage #answerBar").css("display","block");
-			$(".main-questionPage").css("background-color","#FFFFFF")
-			} if($($(".main-questionPage p")[first]).attr("class") == "STIM") {
 			$(".main-questionPage #answerBar").attr("class","purple");
 			$(".main-questionPage #answerBar").css("display","block");
 			$(".main-questionPage").css("background-color","#FFFFFF")
+			} if ($($(".main-questionPage p")[first]).attr("class") == "UNI") {
+			$(".main-questionPage #answerBar").attr("class","green");
+			$(".main-questionPage #answerBar").css("display","block");
+			$(".main-questionPage").css("background-color","#FFFFFF")
+			} if($($(".main-questionPage p")[first]).attr("class") == "ACH") {
+			$(".main-questionPage #answerBar").attr("class","red");
+			$(".main-questionPage #answerBar").css("display","block");
+			$(".main-questionPage").css("background-color","#FFFFFF")
+			} if($($(".main-questionPage p")[first]).attr("class") == "SEC") {
+			$(".main-questionPage #answerBar").attr("class","darkBlue");
+			$(".main-questionPage #answerBar").css("display","block");
+			$(".main-questionPage").css("background-color","#FFFFFF")
+			} if($($(".main-questionPage p")[first]).attr("class") == "STIM") {
+			$(".main-questionPage #answerBar").attr("class","orange");
+			$(".main-questionPage #answerBar").css("display","block");
+			$(".main-questionPage").css("background-color","#FFFFFF")
 			} if($($(".main-questionPage p")[first]).attr("class") == "CON") {
-			$(".main-questionPage #answerBar").attr("class","darkGreen");
+			$(".main-questionPage #answerBar").attr("class","darkPurple");
 			$(".main-questionPage #answerBar").css("display","block");
 			$(".main-questionPage").css("background-color","#FFFFFF")
 			} if($($(".main-questionPage p")[first]).attr("class") == "TRAD") {
-			$(".main-questionPage #answerBar").attr("class","pink");
+			$(".main-questionPage #answerBar").attr("class","darkBlue");
 			$(".main-questionPage #answerBar").css("display","block");
 			$(".main-questionPage").css("background-color","#FFFFFF")
 			} if($($(".main-questionPage p")[first]).attr("class") == "HED") {
-			$(".main-questionPage #answerBar").attr("class","darkBlue");
+			$(".main-questionPage #answerBar").attr("class","pink");
+			$(".main-questionPage #answerBar").css("display","block");
+			$(".main-questionPage").css("background-color","#FFFFFF")
+			} if($($(".main-questionPage p")[first]).attr("class") == "BEN") {
+			$(".main-questionPage #answerBar").attr("class","darkGreen");
 			$(".main-questionPage #answerBar").css("display","block");
 			$(".main-questionPage").css("background-color","#FFFFFF")
 			}
@@ -504,8 +541,8 @@
 			}
 			var index = $(this).index();
 			var answerTop = $(".main-questionPage .topAnswer li")[index];
-			$(".main-questionPage .topAnswer li").css("visibility","hidden");
-			$(answerTop).css("visibility","visible");
+			$(".main-questionPage .topAnswer li").css("color","darkgray");
+			$(answerTop).css("color", "black");
 			$(".main-questionPage #answerBar li").unbind("mouseenter");
 			$(".main-questionPage #answerBar li").unbind("mouseleave");
 		});
@@ -515,24 +552,28 @@
 			$(this).css("height","35px");
 			$(this).css("margin-top","-10px");
 			var index = $(this).index();
+			$($(".main-questionPage .topAnswer li")[index]).css("color","black");
 		});
 		$(".main-questionPage #answerBar li").mouseleave(function(){
 			$(".main-questionPage #answerBar li").css("height","15px");
 			$(".main-questionPage #answerBar li").css("margin","0 auto");
+		    $(".main-questionPage .topAnswer li").css("color","darkgrey");
 		});
 	$(".main-questionPage #questionPage-NextButton").click(function(){
 		//rebind mouse event
-		$(".main-questionPage .topAnswer li").css("visibility","visible");
+		$(".main-questionPage .topAnswer li").css("color","darkgray");
         $(".main-questionPage #answerBar li").mouseenter(function(){
 			$(".main-questionPage #answerBar li").css("height","15px");
 			$(".main-questionPage #answerBar li").css("margin","0 auto");
 			$(this).css("height","35px");
 			$(this).css("margin-top","-10px");
 			var index = $(this).index();
+			$($(".main-questionPage .topAnswer li")[index]).css("color","black");
 		});
 		$(".main-questionPage #answerBar li").mouseleave(function(){
 			$(".main-questionPage #answerBar li").css("height","15px");
 			$(".main-questionPage #answerBar li").css("margin","0 auto");
+		    $(".main-questionPage .topAnswer li").css("color","darkgrey");
 		});
 		if((!$(".main-questionPage #answerBar li").hasClass("selected")) && allchoose.length < count){
 				alert("You have to choose one answer!");
@@ -553,28 +594,31 @@
 				$(".main-questionPage #answerBar").attr("class","yellow");
 				$(".main-questionPage").css("background-color","#FFFFFF");
 				} if ($($(".main-questionPage p")[first]).attr("class") == "POW") {
-				$(".main-questionPage #answerBar ").attr("class","red");
+				$(".main-questionPage #answerBar ").attr("class","purple");
 				$(".main-questionPage").css("background-color","#FFFFFF");
 				} if ($($(".main-questionPage p")[first]).attr("class") == "UNI") {
-				$(".main-questionPage #answerBar").attr("class","blue");
-				$(".main-questionPage").css("background-color","#FFFFFF");
-				} if($($(".main-questionPage p")[first]).attr("class") == "ACH"){
 				$(".main-questionPage #answerBar").attr("class","green");
 				$(".main-questionPage").css("background-color","#FFFFFF");
+				} if($($(".main-questionPage p")[first]).attr("class") == "ACH"){
+				$(".main-questionPage #answerBar").attr("class","red");
+				$(".main-questionPage").css("background-color","#FFFFFF");
 				} if($($(".main-questionPage p")[first]).attr("class") == "SEC"){
-				$(".main-questionPage #answerBar").attr("class","orange");
+				$(".main-questionPage #answerBar").attr("class","darkBlue");
 				$(".main-questionPage").css("background-color","#FFFFFF");
 				} if($($(".main-questionPage p")[first]).attr("class") == "STIM") {
-			    $(".main-questionPage #answerBar").attr("class","purple");
+			    $(".main-questionPage #answerBar").attr("class","orange");
 			    $(".main-questionPage").css("background-color","#FFFFFF");
 			    } if($($(".main-questionPage p")[first]).attr("class") == "CON") {
-			    $(".main-questionPage #answerBar").attr("class","darkGreen");
+			    $(".main-questionPage #answerBar").attr("class","darkPurple");
 			    $(".main-questionPage").css("background-color","#FFFFFF");
 			    } if($($(".main-questionPage p")[first]).attr("class") == "TRAD") {
-			    $(".main-questionPage #answerBar").attr("class","pink");
+			    $(".main-questionPage #answerBar").attr("class","darkBlue");
 			    $(".main-questionPage").css("background-color","#FFFFFF");
 			    } if($($(".main-questionPage p")[first]).attr("class") == "HED") {
-			    $(".main-questionPage #answerBar").attr("class","darkBlue");
+			    $(".main-questionPage #answerBar").attr("class","pink");
+			    $(".main-questionPage").css("background-color","#FFFFFF");
+			    } if($($(".main-questionPage p")[first]).attr("class") == "BEN") {
+			    $(".main-questionPage #answerBar").attr("class","darkGreen");
 			    $(".main-questionPage").css("background-color","#FFFFFF");
 			    }
 			}else {
@@ -587,7 +631,10 @@
 		
 		if(allchoose.length >= count){
 			$($(".main-questionPage #answerBar li")[allchoose[count-1]]).css("height","35px");
-			$($(".main-questionPage #answerBar li")[allchoose[count-1]]).css("margin-top","-10px");		
+			$($(".main-questionPage #answerBar li")[allchoose[count-1]]).css("margin-top","-10px");	
+			$($(".main-questionPage .topAnswer li")[allchoose[count-1]]).css("color","black");
+			$(".main-questionPage #answerBar li").unbind("mouseenter");
+			$(".main-questionPage #answerBar li").unbind("mouseleave");
 		}
 	});
 	//get all question type
@@ -605,39 +652,42 @@
 			$(".main-questionPage #answerBar").attr("class","yellow");
 			$(".main-questionPage").css("background-color","#FFFFFF");
 			} if ($($(".main-questionPage p")[count-2]).attr("class") == "POW") {
-			$(".main-questionPage #answerBar ").attr("class","red");
+			$(".main-questionPage #answerBar ").attr("class","purple");
 			$(".main-questionPage").css("background-color","#FFFFFF");
 			} if ($($(".main-questionPage p")[count-2]).attr("class") == "UNI") {
-			$(".main-questionPage #answerBar").attr("class","blue");
-			$(".main-questionPage").css("background-color","#FFFFFF");
-			} if($($(".main-questionPage p")[count-2]).attr("class") == "ACH"){
 			$(".main-questionPage #answerBar").attr("class","green");
 			$(".main-questionPage").css("background-color","#FFFFFF");
+			} if($($(".main-questionPage p")[count-2]).attr("class") == "ACH"){
+			$(".main-questionPage #answerBar").attr("class","red");
+			$(".main-questionPage").css("background-color","#FFFFFF");
 			} if($($(".main-questionPage p")[count-2]).attr("class") == "SEC"){
-			$(".main-questionPage #answerBar").attr("class","orange");
+			$(".main-questionPage #answerBar").attr("class","darkBlue");
 			$(".main-questionPage").css("background-color","#FFFFFF");
 			} if($($(".main-questionPage p")[count-2]).attr("class") == "STIM") {
-			$(".main-questionPage #answerBar").attr("class","purple");
+			$(".main-questionPage #answerBar").attr("class","orange");
 			$(".main-questionPage").css("background-color","#FFFFFF");
 			} if($($(".main-questionPage p")[count-2]).attr("class") == "CON") {
-			$(".main-questionPage #answerBar").attr("class","darkGreen");
+			$(".main-questionPage #answerBar").attr("class","darkPurple");
 			$(".main-questionPage").css("background-color","#FFFFFF");
 			} if($($(".main-questionPage p")[count-2]).attr("class") == "TRAD") {
-			$(".main-questionPage #answerBar").attr("class","pink");
+			$(".main-questionPage #answerBar").attr("class","darkBlue");
 			$(".main-questionPage").css("background-color","#FFFFFF");
 			} if($($(".main-questionPage p")[count-2]).attr("class") == "HED") {
-			$(".main-questionPage #answerBar").attr("class","darkBlue");
+			$(".main-questionPage #answerBar").attr("class","pink");
+			$(".main-questionPage").css("background-color","#FFFFFF");
+			} if($($(".main-questionPage p")[count-2]).attr("class") == "BEN") {
+			$(".main-questionPage #answerBar").attr("class","darkGreen");
 			$(".main-questionPage").css("background-color","#FFFFFF");
 			}
 		
 			var index = allchoose[count-2];
 			$(".main-questionPage #answerBar li").css("height","15px");
 			$(".main-questionPage #answerBar li").css("margin","0 auto");
-		    $(".main-questionPage .topAnswer li").css("visibility","hidden");
+		    $(".main-questionPage .topAnswer li").css("color","darkgray");
 			$($(".main-questionPage #answerBar li")[index]).css("height","35px");
 			$($(".main-questionPage #answerBar li")[index]).css("margin-top","-10px");
 	    	$($(".main-questionPage #answerBar li")[index]).addClass("selected");
-	    	$($(".main-questionPage .topAnswer li")[index]).css("visibility","visible");
+	    	$($(".main-questionPage .topAnswer li")[index]).css("color","black");
 			$(".main-questionPage .progressBar img").eq(-1).remove();
 			count -= 1
 		}else{
@@ -645,7 +695,9 @@
 			if (r==true){
 				window.location.reload();			
 			}
-		}
+		}			
+		$(".main-questionPage #answerBar li").unbind("mouseenter");
+		$(".main-questionPage #answerBar li").unbind("mouseleave");
 	//	$(".main-questionPage p").css("display","none");
 	//  $($(".main-questionPage p")[newArray[count-2]]).css("display","block");
 	//	if(colorArray[count-2] == 0){
@@ -670,12 +722,13 @@
 	//	$($(".main-questionPage .topAnswer li")[allchoose[count-1]]).css("visibility","visible");
 	});
 	$("#Home").click(function(){
-		if(count>=1){
-			var r = confirm("Leave survey? Changes made may not be saved.");
-			if (r==true){
-				window.location.reload();			
-			}
-		}
+		window.location.reload();
+//		if(count>=1){
+//			var r = confirm("Leave survey? Changes made may not be saved.");
+//			if (r==true){
+//				window.location.reload();			
+//			}
+//		}
 	});
 	$("#postcode").keyup(function(){
 		var c = $(this);
@@ -695,11 +748,16 @@
 		}
 	});
 	$("#submit").click(function(){
-		window.sessionStorage.name = (allchoose.join("-") + "-" + strTypeList);
+		window.onbeforeunload = null;
 		var row = {};
 		for(i=0;i<numOfQuestion;i++){
-			row[typelist[i]] =  allchoose[i] + "";
+			if(row.hasOwnProperty(typelist[i])){
+				row[typelist[i]] = allchoose[i] + row[typelist[i]];				
+			}else{
+				row[typelist[i]] = allchoose[i];				
+			}
 		}
+
 		var gender = $('input[name="gender"]:checked').val();
     	row["gender"] = gender;
         var country = $("#country").find("option:selected").text();
@@ -712,6 +770,7 @@
 		row["postcode"] =  postcode;
 		var json = JSON.stringify(row);
 		console.log(json);
+		
 		//todo
 		$.get("",json);
         $.ajax({
@@ -725,7 +784,9 @@
             window.location.href = "chart.html";
             }
         });
+	sessionStorage.setItem("name",json)
     });
+		
 	});
 	</script>
 </head>
@@ -742,8 +803,10 @@
 
     <div class="main-HomePage">
 		<p id="HomePage-title">Personal Values Survey</p>
-		<p id="HomePage-description">Sample Text Sample Text Sample Text</p>
-		<button id="HomePage-button">Start</button>
+		<p id="HomePage-description">As human beings we all share a universal value system. The difference between us is the
+		degree to which we prioritise the different values. Find out which values matter most to you
+		and how your priorities compare with others in Australia.</p>
+		<button id="HomePage-button">Take Values Survey</button>
 	</div>
 
 	<div class="main-questionPage">
