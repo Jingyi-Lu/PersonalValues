@@ -10,17 +10,22 @@
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <style>
+            #cnm{
+
+            }
+
+
 		#chartdiv {
-			top: 10%;
+			top: 30px;
   			width: 50%;
-  			height: 500px;
+  			height: 80%;
 			float: left;
 			left:-1%;
 		}
 		#chartdiv2 {
-			top: 10%;
-			width: 45%;
-			height: 507px;
+			top: 30px;
+			width: 50%;
+			height: 80%;
 			float: right;
 		}
 		#legenddiv {
@@ -33,24 +38,28 @@
 		#link {
 			float:right;
 			margin-top:5%;
-			margin-right:35%;
+			margin-right:40%;
 		}
 		#postQuestion {
 			margin: 1% 0 0 76%;
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 		}
 		.select-css {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            -ms-appearance: none;
 			text-align: right;
 			border: 1px solid #ccc;
-			width: 120px;
+			width: 200px;
 			border-radius: 3px;
-			overflow: hidden;
 			background-color: #fff;
 			background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
 			linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
 			background-repeat: no-repeat, repeat;
 			background-position: right .7em top 50%, 0 0;
 			background-size: .65em auto, 100%;
+            overflow: auto;
 		}
 		.hidden_div {
 			margin: 0;
@@ -86,7 +95,14 @@
 			overflow: hidden;
 	
 		}
-
+            .chartTitle{
+                text-align:center;
+                margin-top: 100px;
+                background-color: white;
+                width:50%;
+                height:30px;
+                float:left;
+            }
 		.navigator li{
 			float: left;
 			display: block;
@@ -104,7 +120,7 @@
 		}
 
 		.TEST{
-			background-color: #FFFFFF;
+			background-color: white;
 			position: absolute;
 			height: 70%;
 			width: 80%;
@@ -199,22 +215,26 @@
   			<li id="Home"><a href="#home">Home</a></li>
      		<!--<li><a href="#news">Instructions</a></li>
   			<li><a href="#contact">Background</a></li>-->
-  			<li><a href="#about">About us</a></li>
+  			<li><a href="#about">About</a></li>
 			</ul>
 		</div>
 
 
-		<div class="TEST">
+		<div class="TEST" id = "test11">
 			<div  class="selectChart">
-			<form style="overflow: auto; height: 80%;" id="postQuestion">
+			<!--<form style="overflow: auto; height: 80%;" id="postQuestion">-->
+                <p>
 			Which chart do you want to compare with?
+                </p>
 				<select class="select-css" id="average" name="n">
 
 			</select><br>
-			</form>
+			<!--</form>-->
 			</div>
 
-			<div id="legenddiv"></div>
+            <div class="chartTitle"> <p>Your personal value result </p></div>
+            <div class="chartTitle"> <p>Compared personal value result</p></div>
+			<!--<div id="legenddiv"></div>-->
 		<div id="chartdiv"></div>
 
 		<script>
@@ -377,37 +397,40 @@
 			series.tooltip.pointerOrientation = "vertical";
 			// series.tooltip.label.interactionsEnabled = true;
 
-			chart.legend = new am4charts.Legend();
-			chart.legend.position = "left";
-			chart.legend.valign = "middle";
-			chart.legend.align = "50";
-			series.legendSettings.valueText = "{valueY.close}";
+			// chart.legend = new am4charts.Legend();
+			// chart.legend.position = "left";
+			// chart.legend.valign = "middle";
+			// chart.legend.align = "50";
+			// series.legendSettings.valueText = "{valueY.close}";
 
-			var topContainer = chart.chartContainer.createChild(am4core.Container);
-			topContainer.layout = "absolute";
-			topContainer.toBack();
-			topContainer.paddingBottom = 30;
-			topContainer.width = am4core.percent(100);
+            ////chart title
+			// var topContainer = chart.chartContainer.createChild(am4core.Container);
+			// topContainer.layout = "absolute";
+			// topContainer.toBack();
+			// topContainer.paddingBottom = 30;
+			// topContainer.width = am4core.percent(100);
+            //
+			// var axisTitle = topContainer.createChild(am4core.Label);
+			// axisTitle.text = "Your Personal value";
+			// axisTitle.fontWeight = 900;
+			// axisTitle.align = "middle";
+			// axisTitle.paddingLeft = 50 ;
 
-			var axisTitle = topContainer.createChild(am4core.Label);
-			axisTitle.text = "Your Personal value";
-			axisTitle.fontWeight = 900;
-			axisTitle.align = "middle";
-			axisTitle.paddingLeft = 50 ;
 
-			chart.legend.useDefaultMarker = true;
-			var marker = chart.legend.markers.template.children.getIndex(0);
-			marker.cornerRadius(12, 12, 12, 12);
-			marker.strokeWidth = 2;
-			marker.strokeOpacity = 1;
-			marker.stroke = am4core.color("#ccc");
-			series.labels.template.text = "{category}: {radiusValue}";
 
-			var legendContainer = am4core.create("legenddiv", am4core.Container);
-			legendContainer.width = am4core.percent(100);
-			legendContainer.height = am4core.percent(100);
-
-			chart.legend.parent = legendContainer;
+			// chart.legend.useDefaultMarker = true;
+			// var marker = chart.legend.markers.template.children.getIndex(0);
+			// marker.cornerRadius(12, 12, 12, 12);
+			// marker.strokeWidth = 2;
+			// marker.strokeOpacity = 1;
+			// marker.stroke = am4core.color("#ccc");
+			// series.labels.template.text = "{category}: {radiusValue}";
+            //
+			// var legendContainer = am4core.create("legenddiv", am4core.Container);
+			// legendContainer.width = am4core.percent(100);
+			// legendContainer.height = am4core.percent(100);
+            //
+			// chart.legend.parent = legendContainer;
 
 		</script>
 
@@ -616,36 +639,62 @@
 					series.colors.step = 3;
 					series.hiddenState.properties.endAngle = -90;
 
-					series.slices.template.tooltipText = "Value Category: {fullname}\nYour Value: {value.percent.formatNumber('#.0')}% \n Average Value{radiusValue} \n Description: {description}";
+					series.slices.template.tooltipText = "Value Category: {fullname}\nYour Value: {radiusValue} \n Average Value：{averageValue} \n Description: {description}";
 					series.tooltip.pointerOrientation = "vertical";
 					series.tooltip.label.interactionsEnabled = true;
 
 					series.colors = colorSet;
 
-					var topContainer = chart.chartContainer.createChild(am4core.Container);
-					topContainer.layout = "absolute";
-					topContainer.toBack();
-					topContainer.paddingBottom = 30;
-					topContainer.width = am4core.percent(100);
+					////Chart title
+					// var topContainer = chart.chartContainer.createChild(am4core.Container);
+					// topContainer.layout = "absolute";
+					// topContainer.toBack();
+					// topContainer.paddingBottom = 30;
+					// topContainer.width = am4core.percent(100);
+                    //
+					// var axisTitle = topContainer.createChild(am4core.Label);
+					// axisTitle.text = titleString;
+					// axisTitle.fontWeight = 900;
+					// axisTitle.align = "middle";
+					// axisTitle.paddingLeft = 50;
 
-					var axisTitle = topContainer.createChild(am4core.Label);
-					axisTitle.text = titleString;
-					axisTitle.fontWeight = 900;
-					axisTitle.align = "middle";
-					axisTitle.paddingLeft = 50;
 
-					series.slices.template.interactionsEnabled = true;
-					series.slices.template.events.on(
-							"hit",
-							ev => {
-								var item = ev.target.dataItem.component.tooltipDataItem.dataContext;
-								alert("line clicked on: " + item.category + ": " + item.marketing);
-							},
-							this
-					);
+                    series.slices.template.events.on("hit", function(ev) {
+                        $("#test11").animate({
+                            scrollTop: $("#link").offset().top }, {duration: 500,easing: "swing"});
 
-					series.labels.template.text = "{category}: {radiusValue}";
+
+                        // console.log("clicked on ", ev.target);
+                        // alert("line clicked on: ");
+                    }, this);
+
+					// series.slices.template.interactionsEnabled = true;
+					// series.slices.template.events.on(
+					// 		"clickSlice",
+					// 		ev => {
+					// 			var item = ev.target.dataItem.component.tooltipDataItem.dataContext;
+					// 			alert("line clicked on: " + item.category + ": " + item.marketing);
+					// 		},
+					// 		this
+					// );
+					// series.labels.template.text = "{fullname}: {radiusValue}";
+                    series.ticks.template.disabled = true;
+                    series.alignLabels = false;
+                    series.labels.template.text = "{radiusValue}";
+                    series.labels.template.radius = am4core.percent(-40);
+                    series.labels.template.fill = am4core.color("white");
 				}
+
+
+                // function scrollFunction() {
+                //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                //         document.getElementById("myBtn").style.display = "block";
+                //     } else {
+                //         document.getElementById("myBtn").style.display = "none";
+                //     }
+                // }
+
+                // When the user clicks on the button, scroll to the top of the document
 
 
 		</script>
@@ -654,13 +703,13 @@
 		<div id="link">
 
 		<div class="addthis_inline_share_toolbox_jlq2">  </div>
-		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cd4fb38aeca67fc"></script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cd4fb38aeca67fc"></script>
 		</div>
 
 
-			<div class="main">
+			<div class="main" id="cnm">
 				<div class="left">
-					<div class="photo">
+					<div class="photo" >
 						<img class='center-fit' src="colours_image/green.png" >
 					</div>
 					<div class="intro" >
@@ -678,8 +727,7 @@
 					<div class="intro">
 						 <p> <font style="font-family: WildWest;  font-size: large; " color="#4E7A35"> Benevolence </font><br>
 						     <font style="font-family: Verdana; ">Preservation and enhancement of the welfare of people with whom one is in frequent personal contact.
-								  	welfare of people with whom one is in
-								  frequent personal contact.</font>
+								  	</font>
 					    </p>
 					</div>
 
@@ -721,8 +769,8 @@
 				<div class="middle"></div>
 
 
-				<div class="right">
-					<div class="photo">
+				<div class="right" >
+					<div class="photo" >
 						<img class='center-fit' src="colours_image/purple.png" >
 					</div>
 					<div class="intro" >
@@ -749,7 +797,7 @@
 					<div class="photo">
 						<img class='center-fit' src="colours_image/pink.png" >
 					</div>
-					<div class="intro">
+					<div class="intro" >
 						 <p> <font style="font-family: WildWest;  font-size: large; " color="#F158A1"> Hedonism </font><br>
 						<font style="font-family: Verdana; ">Pleasure and sensuous gratification for oneself. </font>
 					</p>
