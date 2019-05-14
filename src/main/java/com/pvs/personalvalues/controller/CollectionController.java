@@ -28,7 +28,7 @@ public class CollectionController {
     @RequestMapping("/downloadCsv")
     public void DownloadCsv(HttpServletResponse response, HttpServletRequest request){
         //HashMap<String, String> map = request.getParameterMap();
-        String username = request.getParameter("username");
+        /**String username = request.getParameter("username");
         System.out.println(username);
         String password = request.getParameter("password");
         if (!username.equals("Mark") || !password.equals("Tech4Values")) {
@@ -38,7 +38,7 @@ public class CollectionController {
                 e.printStackTrace();
             }
             return;
-        }
+        }**/
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/csv");
         response.setHeader("Content-Disposition", "attachment; filename=\"data.csv\"");

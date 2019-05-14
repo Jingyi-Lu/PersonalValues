@@ -35,6 +35,16 @@ public class QuestionServiceImpl implements QuestionService {
     @Override
     public SaveUserDataMsg saveUserData(UserData data) {
         SaveUserDataMsg msg = new SaveUserDataMsg();
+        data.setAch(data.getAch() / 2.0);
+        data.setBen(data.getBen() / 2.0);
+        data.setCon(data.getCon() / 2.0);
+        data.setHed(data.getHed() / 2.0);
+        data.setPow(data.getPow() / 2.0);
+        data.setSd(data.getSd() / 2.0);
+        data.setSec(data.getSec() / 2.0);
+        data.setStim(data.getStim() / 2.0);
+        data.setTrad(data.getTrad() / 2.0);
+        data.setUni(data.getUni() / 3.0);
         msg.setError(1);
         mapper.saveUserData(data);
         List<MeanUserData> list = mapper2.GetMeanUserDataByUserData(data);

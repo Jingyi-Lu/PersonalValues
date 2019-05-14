@@ -23,16 +23,16 @@ public class ComparisionServiceImpl implements ComparisonService {
         System.out.println(list.size());
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getCount() != 0) {
-                list.get(i).setAch(list.get(i).getAch() / list.get(i).getCount());
-                list.get(i).setCon(list.get(i).getCon() / list.get(i).getCount());
-                list.get(i).setHed(list.get(i).getHed() / list.get(i).getCount());
-                list.get(i).setPow(list.get(i).getPow() / list.get(i).getCount());
-                list.get(i).setSec(list.get(i).getSec() / list.get(i).getCount());
-                list.get(i).setStim(list.get(i).getStim() / list.get(i).getCount());
-                list.get(i).setSd(list.get(i).getSd() / list.get(i).getCount());
-                list.get(i).setTrad(list.get(i).getTrad() / list.get(i).getCount());
-                list.get(i).setUni(list.get(i).getUni() / list.get(i).getCount());
-                list.get(i).setBen(list.get(i).getBen() / list.get(i).getCount());
+                list.get(i).setAch((double) Math.round(100 * list.get(i).getAch() / list.get(i).getCount()) / 100);
+                list.get(i).setCon((double) Math.round(100 * list.get(i).getCon() / list.get(i).getCount()) / 100);
+                list.get(i).setHed((double) Math.round(100 * list.get(i).getHed() / list.get(i).getCount()) / 100);
+                list.get(i).setPow((double) Math.round(100 * list.get(i).getPow() / list.get(i).getCount()) / 100);
+                list.get(i).setSec((double) Math.round(100 * list.get(i).getSec() / list.get(i).getCount()) / 100);
+                list.get(i).setStim((double) Math.round(100 * list.get(i).getStim() / list.get(i).getCount()) / 100);
+                list.get(i).setSd((double) Math.round(100 * list.get(i).getSd() / list.get(i).getCount()) / 100);
+                list.get(i).setTrad((double) Math.round(100 * list.get(i).getTrad() / list.get(i).getCount()) / 100);
+                list.get(i).setUni((double) Math.round(100 * list.get(i).getUni() / list.get(i).getCount()) / 100);
+                list.get(i).setBen((double) Math.round(100 * list.get(i).getBen() / list.get(i).getCount()) / 100);
 
             }
         }
