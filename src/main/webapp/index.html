@@ -431,6 +431,40 @@
 			right: 20px;
 			bottom: 10px;
 		}
+		
+		.tip { 
+			background: #eee; 
+			border: 1px solid #ccc; 
+			padding: 10px; 
+			border-radius: 8px; 
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+			position: relative; 
+			width: 200px; 
+			visibility: hidden;
+		} 
+
+		.tip:before { 
+			position: absolute; 
+			display: inline-block; 
+			border-top: 7px solid transparent; 
+			border-right: 7px solid #eee; 
+			border-bottom: 7px solid transparent; 
+			border-right-color: rgba(0, 0, 0, 0.2); 
+			left: -8px; 
+			top: 12px; 
+			content: ''; 
+		} 
+
+		.tip:after { 
+			position: absolute; 
+			display: inline-block; 
+			border-top: 6px solid transparent; 
+			border-right: 6px solid #eee; 
+			border-bottom: 6px solid transparent; 
+			left: -6px; 
+			top: 13px; 
+			content: ''; 
+		} 
 	</style>
 	<script>
 	$(document).ready(function(){
@@ -732,11 +766,29 @@
 	});
 	$("#postcode").keyup(function(){
 		var c = $(this);
-		if(/[^\d]/.test(c.val())){
-              alert("please enter valid postcode!");
+		if(/[^\d]/.test(c.val()) || c.val().length > 4){
+              $(".tip").css("visibility","visible");
 			  $(this).val("");
+		}else{
+			  $(".tip").css("visibility","hidden");
 		}
+		
+		if(c.val().length == 4) {
+			if (c.val() < 200){
+	            $(".tip").css("visibility","visible");	
+			    $(this).val("");
+			}else{
+			  $(".tip").css("visibility","hidden");			
+			}
+		}
+		
 	});
+		
+	var temp = $("#postcode").val();
+	if (temp > 2001){
+		alert("wrong postcode");
+	}
+	
 	$("#country").change(function(){
 		if ($(this).val() != "Australia") {
 			$("#optionalQuestion").css("display","none");
@@ -794,10 +846,10 @@
 <body>
 	<div class="navigator">
 		<ul>
-  			<li id="Home"><a href="#home">Home</a></li>
+  			<li id="Home"><a href="index.html">Home</a></li>
      		<!--<li><a href="#news">Instructions</a></li>
   			<li><a href="#contact">Background</a></li>-->
-  			<li><a href="#about">About</a></li>
+  			<li><a href="About.html">About</a></li>
 		</ul>
 	</div>
 
@@ -831,7 +883,7 @@
 			<li>A little like me</li>
 			<li>Moderately like me</li>
 			<li>Like me</li>
-			<li >Very much like Me</li>
+			<li >Very much like me</li>
 		</ul>
 
 		<ul id="answerBar">
@@ -1107,13 +1159,13 @@
 		<br>
 		<div id="optionalQuestion">
 			What is your postcode?<br>
-			<input id="postcode" type="text">
+			<input style="margin-right: 2%" id="postcode" type="text"><span class="tip">Please enter correct postcode</span>
 		</div>
 		<br>
 		What is your gender?<br>
 		<input type="radio" name="gender" value="Female">Female<br>
-		<input type="radio" name="gender" value="Female">Male<br>
-		<input type="radio" name="gender" value="Female">Other
+		<input type="radio" name="gender" value="Male">Male<br>
+		<input type="radio" name="gender" value="Other">Other
 		<br>
 		<br>
 		What is your age?<br>

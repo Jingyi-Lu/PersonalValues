@@ -1,9 +1,27 @@
 <!DOCTYPE HTML>
-<html>
+<html><body>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
 <title>csv download</title>
-<form id="downloadcsv" action="http://www.valuessurvey.com.au/collect/downloadCsv">
-    <div><p>Username:</p><input name="username"></div>
-    <div><p>Password:</p><input name="password" type="password"></div>
-    <div><button type="submit">Download Now</button></div>
-</form>
+    <div><p>Username:</p><input id="username"></div>
+    <div><p>Password:</p><input id="password" type="password"></div>
+    <div><button id="submit" type="submit">Download Now</button></div>
+<script>
+    $(document).ready(function(){
+        console.log("bala");
+        $("#submit").click(function() {
+            console.log("balala");
+            window.location.href = "http://valuessurvey.com.au/collect/downloadCsv"
+            /**$.ajax({
+                url: "http://valuessurvey.com.au/collect/downloadCsv",
+                type: "POST",
+                async: false,
+                success: function (result) {
+
+                }
+            });**/
+        });
+
+    });
+</script></body>
 </html>
