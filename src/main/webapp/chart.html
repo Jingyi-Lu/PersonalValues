@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -40,7 +39,19 @@
 			margin: 1% 0 0 76%;
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 		}
-
+		.select-css {
+			text-align: right;
+			border: 1px solid #ccc;
+			width: 120px;
+			border-radius: 3px;
+			overflow: hidden;
+			background-color: #fff;
+			background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+			linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+			background-repeat: no-repeat, repeat;
+			background-position: right .7em top 50%, 0 0;
+			background-size: .65em auto, 100%;
+		}
 		.hidden_div {
 			margin: 0;
 			position: fixed;
@@ -107,8 +118,10 @@
 			position: absolute;
 			height: 10%;
 			width: 100%;
+			text-align: right;
 			/*left: 10%;*/
 			top: 2%;
+			margin-left: -2%;
 			/*overflow: auto;*/
 		}
 
@@ -163,11 +176,6 @@
 			width:100%;
 			height : 15%;
 		}
-		.iconcontainer.first, .iconcontainer.second{
-			display: inline-block;
-			width:50%;
-			height:50%;
-		}
 
 		.iconcontainer img {
 			display: block;
@@ -196,15 +204,12 @@
 		</div>
 
 
-
 		<div class="TEST">
-
 			<div  class="selectChart">
 			<form style="overflow: auto; height: 80%;" id="postQuestion">
 			Which chart do you want to compare with?
-			<select id="country" name="country">
-			<option value="Australia" selected="selected" id="Australia">Australia</option>
-			<option value="Afghanistan">Afghanistan</option>
+				<select class="select-css" id="average" name="n">
+
 			</select><br>
 			</form>
 			</div>
@@ -212,55 +217,65 @@
 			<div id="legenddiv"></div>
 		<div id="chartdiv"></div>
 
-		<!--<img width="43%" style="float: right;margin-top: 10%" src="../WechatIMG96.jpeg">-->
 		<script>
-			var temp1 = [];var temp2 = [];var temp3 = [];var temp4 = [];var temp5 = [];
-			var temp6 = [];var temp7 = [];var temp8 = [];var temp9 = [];var temp10 = [];
-	
 			var value = window.sessionStorage.name;
-			var getValue = value.split("-");
-			var answerList = getValue.slice(0,getValue.length/2);
-			var typeList = getValue.slice(getValue.length/2,getValue.length+1);
-			for (i=0;i<answerList.length;i++) {
-				if(typeList[i] ==  "UNI"){
-					temp1.push(answerList[i]);
-				}
-				// if(typeList[i] ==  "BEN"){
-				// 	temp2.push(answerList[i]);
-				// }
-				if(typeList[i] ==  "TRAD"){
-					temp3.push(answerList[i]);
-				}
-			    if(typeList[i] ==  "CON"){
-					temp4.push(answerList[i]);
-				}
-				if(typeList[i] ==  "SEC"){
-					temp5.push(answerList[i]);
-				}
-				if(typeList[i] ==  "POW"){
-					temp6.push(answerList[i]);
-				}
-				if(typeList[i] ==  "ACH"){
-					temp7.push(answerList[i]);
-				}
-				if(typeList[i] ==  "HED"){
-					temp8.push(answerList[i]);
-				}
-				if(typeList[i] ==  "STIM"){
-					temp9.push(answerList[i]);
-				}
-				if(typeList[i] ==  "SD"){
-					temp10.push(answerList[i]);
-				}
-			}
-			
-			function sum(arr) {
-    			var s = parseInt(arr[0]);
-    			for (i=1; i<arr.length; i++) {
-        		s += parseInt(arr[i]);
-    		}
-    			return s;
-			}
+			var obj = JSON.parse(value);
+
+			var temp1 =  obj["UNI"];
+			var temp2 =  obj["BEN"];
+			var temp3 =  obj["TRAD"];
+			var temp4 =  obj["CON"];
+			var temp5 =  obj["SEC"];
+			var temp6 =  obj["POW"];
+			var temp7 = obj["ACH"];
+			var temp8 = obj["HED"];
+			var temp9 = obj["STIM"];
+			var temp10 = obj["SD"];
+
+			// var value = window.sessionStorage.name;
+			// var getValue = value.split("-");
+			// var answerList = getValue.slice(0,getValue.length/2);
+			// var typeList = getValue.slice(getValue.length/2,getValue.length+1);
+			// for (i=0;i<answerList.length;i++) {
+			// 	if(typeList[i] ==  "UNI"){
+			// 		temp1.push(answerList[i]);
+			// 	}
+			// 	// if(typeList[i] ==  "BEN"){
+			// 	// 	temp2.push(answerList[i]);
+			// 	// }
+			// 	if(typeList[i] ==  "TRAD"){
+			// 		temp3.push(answerList[i]);
+			// 	}
+			//     if(typeList[i] ==  "CON"){
+			// 		temp4.push(answerList[i]);
+			// 	}
+			// 	if(typeList[i] ==  "SEC"){
+			// 		temp5.push(answerList[i]);
+			// 	}
+			// 	if(typeList[i] ==  "POW"){
+			// 		temp6.push(answerList[i]);
+			// 	}
+			// 	if(typeList[i] ==  "ACH"){
+			// 		temp7.push(answerList[i]);
+			// 	}
+			// 	if(typeList[i] ==  "HED"){
+			// 		temp8.push(answerList[i]);
+			// 	}
+			// 	if(typeList[i] ==  "STIM"){
+			// 		temp9.push(answerList[i]);
+			// 	}
+			// 	if(typeList[i] ==  "SD"){
+			// 		temp10.push(answerList[i]);
+			// 	}
+			// }
+			//
+			// function sum(arr) {
+    		// 	var s = parseInt(arr[0]);
+    		// 	for (i=1; i<arr.length; i++) {
+        	// 	s += parseInt(arr[i]);
+    		// }
+    		// 	return s;
+			// }
 			// Themes begin
 			am4core.useTheme(am4themes_animated);
 
@@ -272,72 +287,71 @@
 
 			chart.data = [
 				{
-					country: "UNI",
-					value: sum(temp1)/temp1.length,
+					category: "UNI",
+					value: temp1/3,
 					description: "Understanding, appreciation, tolerance and protection \n for the welfare of all people and for nature.",
 					fullname:"UNIVERSALISM",
 					value2: 2,
 				},
-				// {
-				// country: "BEN",
-				// value: sum(temp2)/temp2.length,
-				// description: "Preservation and enhancement of the \n welfare of people with whom one is in \m frequent personal contact.
-				// 	welfare of people with whom one is in
-				// frequent personal contact.",
-				// fullname:"BENEVOLENCE",
-				// },
 				{
-					country: "TRAD",
-					value: sum(temp3)/temp3.length,
+					category: "BEN",
+					value: temp2/2,
+					description: "Preservation and enhancement of the \n welfare of people with whom one is in \n frequent personal contact. welfare of people with whom one is in frequent personal contact.",
+					fullname:"BENEVOLENCE",
+					value2: 2,
+				},
+				{
+					category: "TRAD",
+					value: temp3/2,
 					description: "Respect, commitment and acceptance of \n the customs and ideas that traditional \n culture or religion provide the self.",
 					fullname:"TRADITION",
 					value2: 2,
 				},
 				{
-					country: "CON",
-					value: sum(temp4)/temp4.length,
+					category: "CON",
+					value: temp4/2,
 					description: "Restraint of actions, inclinations and \n impulses likely to upset or harm others \n and violate social expectations or norms. ",
 					fullname:"CONFORMITY",
 					value2: 2,
 				},
 				{
-					country: "SEC",
-					value: sum(temp5)/temp5.length,
+					category: "SEC",
+					value: temp5/2,
 					description: "Safety, harmony, and stability of society, of relationships, and of self.",
 					fullname:"SECURITY",
 					value2: 2,
 				},
 				{
-					country: "POW",
-					value: sum(temp6)/temp6.length,
+					category: "POW",
+					value: temp6/2,
 					description: "Social status and prestige, control or \n dominance over people and resources.",
 					fullname:"POWER",
 					value2: 2,
 				},
 				{
-					country: "ACH",
-					value: sum(temp7)/temp7.length,
+					category: "ACH",
+					value: temp7/2,
 					description: "Personal success through demonstrating \n competence according to social standards. ",
 					fullname:"ACHIEVEMENT",
 					value2: 2,
 				},
 				{
-					country: "HED",
-					value: sum(temp8)/temp8.length,
+					category: "HED",
+					value: temp8/2,
 					description: "Pleasure and sensuous gratification for oneself. ",
 					fullname:"HEDONISM",
 					value2: 2,
 				},
 				{
-					country: "STIM",
-					value: sum(temp9)/temp9.length,
+					category: "STIM",
+					value: temp9/2,
 					description: "Excitement, novelty and challenge in life.",
 					fullname:"STIMULATION",
 					value2: 2,
 				},
 				{
-					country: "SD",
-					value: sum(temp10)/temp10.length,
+					category: "SD",
+					value: temp10/2,
 					description: "Independent thought and action—choosing, creating, exploring. ",
 					fullname:"SELF-DIRECTION",
 					value2: 2,
@@ -352,7 +366,7 @@
 			var series = chart.series.push(new am4charts.PieSeries());
 			series.dataFields.value = "value2";
 			series.dataFields.radiusValue = "value";
-			series.dataFields.category = "country";
+			series.dataFields.category = "category";
 			series.slices.template.cornerRadius = 6;
 			series.colors.step = 3;
 			series.hiddenState.properties.endAngle = -90;
@@ -395,225 +409,243 @@
 
 			chart.legend.parent = legendContainer;
 
-
 		</script>
 
 
 		<div id="chartdiv2"></div>
 
 		<script>
-			$(document).ready(function() {
-				//for question type
-				var typelist = [];
-				//collect all
-				var allchoose = [];
-				//for random question
-				var qestionArray = [];
-
-				htmlobj = $.ajax({
-					url: "http://www.valuessurvey.com.au/compare/getAverageDataByUserData",
-					type: "POST",
-					async: false,
-					success: function (result) {
-						// if ((typeof result == 'object') && result.constructor == Object) {
-						// 	obj = result;
-						// } else {
-						// 	obj = eval("(" + result + ")");
-						// }
-						console.log(obj);
-						var jsonStr = JSON.parse(result.json);
-						alert(jsonStr.name);
-
-
-						// console.log(obj.questions[1]);
-						// var count = obj.questions.length - 1;
-						// for (i = 0; i < count; i++) {
-						// 	$("#questions").append("<p class='" + obj.questions[i].questionType + "'>" + obj.questions[i].content + "</p>");
-						// }
-					}
-				});
-			});
-
-			var temp1 = [];
-			var temp2 = [];
-			var temp3 = [];
-			var temp4 = [];
-			var temp5 = [];
-			var temp6 = [];
-			var temp7 = [];
-			var temp8 = [];
-			var temp9 = [];
-			var temp10 = [];
+				// //for question type
+				// var typelist = [];
+				// //collect all
+				// var allchoose = [];
+				// //for random question
+				// var qestionArray = [];
 
 			var value = window.sessionStorage.name;
-			var getValue = value.split("-");
-			var answerList = getValue.slice(0,getValue.length/2);
-			var typeList = getValue.slice(getValue.length/2,getValue.length+1);
-			for (i=0;i<answerList.length;i++) {
-				if(typeList[i] ==  "UNI"){
-					temp1.push(answerList[i]);
-				}
-				// if(typeList[i] ==  "BEN"){
-				// 	temp2.push(answerList[i]);
-				// }
-				if(typeList[i] ==  "TRAD"){
-					temp3.push(answerList[i]);
-				}
-				if(typeList[i] ==  "CON"){
-					temp4.push(answerList[i]);
-				}
-				if(typeList[i] ==  "SEC"){
-					temp5.push(answerList[i]);
-				}
-				if(typeList[i] ==  "POW"){
-					temp6.push(answerList[i]);
-				}
-				if(typeList[i] ==  "ACH"){
-					temp7.push(answerList[i]);
-				}
-				if(typeList[i] ==  "HED"){
-					temp8.push(answerList[i]);
-				}
-				if(typeList[i] ==  "STIM"){
-					temp9.push(answerList[i]);
-				}
-				if(typeList[i] ==  "SD"){
-					temp10.push(answerList[i]);
-				}
-			}
 
-			function sum(arr) {
-				var s = parseInt(arr[0]);
-				for (i=1; i<arr.length; i++) {
-					s += parseInt(arr[i]);
-				}
-				return s;
+			var obj = JSON.parse(value);
+			console.log(obj);
+
+			function firstN(obj, fro, to ) {
+					return Object.keys(obj) //get the keys out
+							.sort() //this will ensure consistent ordering of what you will get back. If you want something in non-aphabetical order, you will need to supply a custom sorting function
+							.slice(fro, to) //get the first N
+							.reduce(function(memo, current) { //generate a new object out of them
+								memo[current] = obj[current];
+								return memo;
+							}, {})
 			}
+			var newo = firstN(obj, 10, 14);
+
+			console.log(newo);
+				var keys = Object.keys(newo);
+				console.log(keys);
+
+			// var temp1 =  obj["UNI"];
+			// var temp2 =  obj["BEN"];
+			// var temp3 =  obj["TRAD"];
+			// var temp4 =  obj["CON"];
+			// var temp5 =  obj["SEC"];
+			// var temp6 =  obj["POW"];
+			// var temp7 = obj["ACH"];
+			// var temp8 = obj["HED"];
+			// var temp9 = obj["STIM"];
+			// var temp10 = obj["SD"];
+
+				//Define the option of the select according to the info from the previous page
+				var myobject = {
+					country : newo["country"],
+					gender : newo["gender"],
+					age : newo["age"],
+					party : newo["party"],
+				};
+				var select = document.getElementById("average");
+				for(index in myobject) {
+					select.options[select.options.length] = new Option(myobject[index], index);
+				}
+
+				var myResponse;
+				$.ajax({
+					url: "http://www.valuessurvey.com.au/compare/getAverageDataByUserData",
+					type: "POST",
+					data: JSON.stringify(newo),
+					async: false,
+					contentType: "application/json; charset=utf-8",
+					success: function (data) {
+						myResponse = data.data;
+					},
+					error: function (ex) {
+						alert(ex.responseText);
+					}
+				});
+				console.log(myResponse);
+
+				var title = "";
+				for (var i = 0; i < myResponse.length; i++) {
+					if ("country" in myResponse[i]){
+						var country = myResponse[i];
+						 title = country["country"];
+						console.log(country["uni"]);
+					}
+					if ("age" in myResponse[i]){
+						var age = myResponse[i];
+						console.log(age);
+					}
+					if ("gender" in myResponse[i]){
+						var gender = myResponse[i];
+						console.log(gender);
+					}
+					if ("party" in myResponse[i]){
+						var party = myResponse[i];
+						console.log(party);
+					}}
+
+				var selectAarray = country;
+
+				$('select').on('change', function() {
+					var selectAarray = eval(this.value) ;
+					title = selectAarray[this.value];
+					var newTitle = title + " Average Personal Value";
+					drawPiechart(selectAarray,newTitle);
+				});
 
 			// Themes begin
-			am4core.useTheme(am4themes_animated);
-			// Themes end
-			// Create chart
-			var chart = am4core.create("chartdiv2", am4charts.PieChart);
-			chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-
-			chart.data = [
-				{
-					country: "UNI",
-					value: sum(temp1)/temp1.length,
-					description: "Understanding, appreciation, tolerance and protection \n for the welfare of all people and for nature.",
-					fullname:"UNIVERSALISM",
-					value2: 2,
-				},
-				// {
-				// country: "BEN",
-				// value: sum(temp2)/temp2.length,
-				// description: "Preservation and enhancement of the \n welfare of people with whom one is in \m frequent personal contact.
-			// 	welfare of people with whom one is in
-			// frequent personal contact.",
-				// fullname:"BENEVOLENCE",
-				// },
-				{
-					country: "TRAD",
-					value: sum(temp3)/temp3.length,
-					description: "Respect, commitment and acceptance of \n the customs and ideas that traditional \n culture or religion provide the self.",
-					fullname:"TRADITION",
-					value2: 2,
-				},
-				{
-					country: "CON",
-					value: sum(temp4)/temp4.length,
-					description: "Restraint of actions, inclinations and \n impulses likely to upset or harm others \n and violate social expectations or norms. ",
-					fullname:"CONFORMITY",
-					value2: 2,
-				},
-				{
-					country: "SEC",
-					value: sum(temp5)/temp5.length,
-					description: "Safety, harmony, and stability of society, of relationships, and of self.",
-					fullname:"SECURITY",
-					value2: 2,
-				},
-				{
-					country: "POW",
-					value: sum(temp6)/temp6.length,
-					description: "Social status and prestige, control or \n dominance over people and resources.",
-					fullname:"POWER",
-					value2: 2,
-				},
-				{
-					country: "ACH",
-					value: sum(temp7)/temp7.length,
-					description: "Personal success through demonstrating \n competence according to social standards. ",
-					fullname:"ACHIEVEMENT",
-					value2: 2,
-				},
-				{
-					country: "HED",
-					value: sum(temp8)/temp8.length,
-					description: "Pleasure and sensuous gratification for oneself. ",
-					fullname:"HEDONISM",
-					value2: 2,
-				},
-				{
-					country: "STIM",
-					value: sum(temp9)/temp9.length,
-					description: "Excitement, novelty and challenge in life.",
-					fullname:"STIMULATION",
-					value2: 2,
-				},
-				{
-					country: "SD",
-					value: sum(temp10)/temp10.length,
-					description: "Independent thought and action—choosing, creating, exploring. ",
-					fullname:"SELF-DIRECTION",
-					value2: 2,
-				},
-			];
-			var colorSet = new am4core.ColorSet();
-			colorSet.list = ["#82B241", "#4E7A35", "#3DAEE4", "#6878D8", "#0473BA","#872784","#D62129","#F158A1","#F26F2C","#F7CF25"].map(function(color) {
-				return new am4core.color(color);
-			});
-
-			var series = chart.series.push(new am4charts.PieSeries());
-			series.dataFields.value = "value2";
-			series.dataFields.radiusValue = "value";
-			series.dataFields.category = "country";
-			series.slices.template.cornerRadius = 6;
-			series.colors.step = 3;
-			series.hiddenState.properties.endAngle = -90;
-
-			series.slices.template.tooltipText = "Value Category: {fullname}\nYour Value: {value.percent.formatNumber('#.0')}% \n Average Value{radiusValue} \n Description: {description}" ;
-			series.tooltip.pointerOrientation = "vertical";
-			series.tooltip.label.interactionsEnabled = true;
-
-			series.colors = colorSet;
-
-			var topContainer = chart.chartContainer.createChild(am4core.Container);
-			topContainer.layout = "absolute";
-			topContainer.toBack();
-			topContainer.paddingBottom = 30;
-			topContainer.width = am4core.percent(100);
-
-			var axisTitle = topContainer.createChild(am4core.Label);
-			axisTitle.text = "Australian Average Personal value";
-			axisTitle.fontWeight = 900;
-			axisTitle.align = "middle";
-			axisTitle.paddingLeft = 50 ;
-
-			series.slices.template.interactionsEnabled = true;
-			series.slices.template.events.on(
-					"hit",
-					ev => {
-						var item = ev.target.dataItem.component.tooltipDataItem.dataContext;
-						alert("line clicked on: " + item.country + ": " + item.marketing);
-					},
-					this
-			);
-
-			series.labels.template.text = "{category}: {radiusValue}";
+				initialTitle = title + " Average Personal Value";
+				drawPiechart(selectAarray, initialTitle);
+				function drawPiechart(selectAarray, titleString) {
+					am4core.useTheme(am4themes_animated);
+					// Themes end
+					// Create chart
+					var chart = am4core.create("chartdiv2", am4charts.PieChart);
+					chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
 
+					chart.data = [
+						{
+							category: "UNI",
+							value: temp1 / 3,
+							description: "Understanding, appreciation, tolerance and protection \n for the welfare of all people and for nature.",
+							fullname: "UNIVERSALISM",
+							value2: 2,
+							averageValue: selectAarray["uni"],
+						},
+						{
+							category: "BEN",
+							value: temp2 / 2,
+							description: "Preservation and enhancement of the \n welfare of people with whom one is in \n frequent personal contact. welfare of people with whom one is in frequent personal contact.",
+							fullname: "BENEVOLENCE",
+							value2: 2,
+							averageValue: selectAarray["ben"],
+						},
+						{
+							category: "TRAD",
+							value: temp3 / 2,
+							description: "Respect, commitment and acceptance of \n the customs and ideas that traditional \n culture or religion provide the self.",
+							fullname: "TRADITION",
+							value2: 2,
+							averageValue: selectAarray["trad"],
+						},
+						{
+							category: "CON",
+							value: temp4 / 2,
+							description: "Restraint of actions, inclinations and \n impulses likely to upset or harm others \n and violate social expectations or norms. ",
+							fullname: "CONFORMITY",
+							value2: 2,
+							averageValue: selectAarray["con"],
+						},
+						{
+							category: "SEC",
+							value: temp5 / 2,
+							description: "Safety, harmony, and stability of society, of relationships, and of self.",
+							fullname: "SECURITY",
+							value2: 2,
+							averageValue: selectAarray["sec"],
+						},
+						{
+							category: "POW",
+							value: temp6 / 2,
+							description: "Social status and prestige, control or \n dominance over people and resources.",
+							fullname: "POWER",
+							value2: 2,
+							averageValue: selectAarray["pow"],
+						},
+						{
+							category: "ACH",
+							value: temp7 / 2,
+							description: "Personal success through demonstrating \n competence according to social standards. ",
+							fullname: "ACHIEVEMENT",
+							value2: 2,
+							averageValue: selectAarray["ach"],
+						},
+						{
+							category: "HED",
+							value: temp8 / 2,
+							description: "Pleasure and sensuous gratification for oneself. ",
+							fullname: "HEDONISM",
+							value2: 2,
+							averageValue: selectAarray["hed"],
+						},
+						{
+							category: "STIM",
+							value: temp9 / 2,
+							description: "Excitement, novelty and challenge in life.",
+							fullname: "STIMULATION",
+							value2: 2,
+							averageValue: selectAarray["stim"],
+						},
+						{
+							category: "SD",
+							value: temp10 / 2,
+							description: "Independent thought and action—choosing, creating, exploring. ",
+							fullname: "SELF-DIRECTION",
+							value2: 2,
+							averageValue: selectAarray["sd"],
+						},
+					];
+					var colorSet = new am4core.ColorSet();
+					colorSet.list = ["#82B241", "#4E7A35", "#3DAEE4", "#6878D8", "#0473BA", "#872784", "#D62129", "#F158A1", "#F26F2C", "#F7CF25"].map(function (color) {
+						return new am4core.color(color);
+					});
+
+					var series = chart.series.push(new am4charts.PieSeries());
+					series.dataFields.value = "value2";
+					series.dataFields.radiusValue = "averageValue";
+					series.dataFields.category = "category";
+					series.slices.template.cornerRadius = 6;
+					series.colors.step = 3;
+					series.hiddenState.properties.endAngle = -90;
+
+					series.slices.template.tooltipText = "Value Category: {fullname}\nYour Value: {value.percent.formatNumber('#.0')}% \n Average Value{radiusValue} \n Description: {description}";
+					series.tooltip.pointerOrientation = "vertical";
+					series.tooltip.label.interactionsEnabled = true;
+
+					series.colors = colorSet;
+
+					var topContainer = chart.chartContainer.createChild(am4core.Container);
+					topContainer.layout = "absolute";
+					topContainer.toBack();
+					topContainer.paddingBottom = 30;
+					topContainer.width = am4core.percent(100);
+
+					var axisTitle = topContainer.createChild(am4core.Label);
+					axisTitle.text = titleString;
+					axisTitle.fontWeight = 900;
+					axisTitle.align = "middle";
+					axisTitle.paddingLeft = 50;
+
+					series.slices.template.interactionsEnabled = true;
+					series.slices.template.events.on(
+							"hit",
+							ev => {
+								var item = ev.target.dataItem.component.tooltipDataItem.dataContext;
+								alert("line clicked on: " + item.category + ": " + item.marketing);
+							},
+							this
+					);
+
+					series.labels.template.text = "{category}: {radiusValue}";
+				}
 
 
 		</script>
