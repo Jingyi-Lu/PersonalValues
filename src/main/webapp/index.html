@@ -477,7 +477,7 @@
 		//for random question
 		var qestionArray = [];
         htmlobj=$.ajax({
-            url:"http://13.236.67.235:8080/question/getquestions",
+            url:"question/getquestions",
             type : "POST",
             async:false,
             success: function(result){
@@ -826,7 +826,7 @@
 		//todo
 		$.get("",json);
         $.ajax({
-            url:"http://13.236.67.235:8080/question/saveuserdata",
+            url:"question/saveuserdata",
             type : "POST",
             async:false,
             contentType: 'application/json',
