@@ -74,7 +74,6 @@
 			width: 30%;
 			height: 100px;
 			line-height: 20%;
-			border-radius: 10%;
 			cursor: pointer;
 				
 		}
@@ -477,7 +476,7 @@
 		//for random question
 		var qestionArray = [];
         htmlobj=$.ajax({
-            url:"question/getquestions",
+            url:"http://13.236.67.235:8080/question/getquestions",
             type : "POST",
             async:false,
             success: function(result){
@@ -826,7 +825,7 @@
 		//todo
 		$.get("",json);
         $.ajax({
-            url:"question/saveuserdata",
+            url:"http://13.236.67.235:8080/question/saveuserdata",
             type : "POST",
             async:false,
             contentType: 'application/json',
