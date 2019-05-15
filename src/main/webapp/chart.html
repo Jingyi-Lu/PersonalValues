@@ -93,6 +93,7 @@
 		}
             .chartTitle{
                 text-align:center;
+                font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
                 margin-top: 100px;
                 background-color: white;
                 width:50%;
@@ -111,6 +112,7 @@
 			color: rgba(255,255,255,0.8);
 			text-align: center;
 			font-size: 30px;
+			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			margin-top: 1%;
 			margin-bottom: 1%;
 		}
@@ -123,6 +125,7 @@
 			left: 10%;
 			top: 15%;
 			overflow: auto;
+			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			/*display: none;*/
 		}
 		.selectChart{
@@ -170,6 +173,7 @@
 			/*margin-left: 2%;*/
 			/*left: 5%;*/
 			text-align: left;
+			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			float: left;
 			width: 73%;
 			line-height : 100%;
@@ -197,6 +201,15 @@
 			height: 100%;
 		}
 
+		.description{
+
+			font-size: 20px;
+			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+			color: black;
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+
 
         </style>	
 		<script src="https://www.amcharts.com/lib/4/core.js"></script>
@@ -208,10 +221,10 @@
    	<body>
 		<div class="navigator">
 			<ul>
-  			<li id="Home"><a href="#home">Home</a></li>
+  			<li id="Home"><a href="index.html">Home</a></li>
      		<!--<li><a href="#news">Instructions</a></li>
   			<li><a href="#contact">Background</a></li>-->
-  			<li><a href="#about">About</a></li>
+  			<li><a href="About.html">About</a></li>
 			</ul>
 		</div>
 
@@ -228,8 +241,8 @@
 			<!--</form>-->
 			</div>
 
-            <div class="chartTitle"> <p>Your personal value result </p></div>
-            <div class="chartTitle"> <p>Compared personal value result</p></div>
+            <div class="chartTitle"> <p>Your Personal values Result </p></div>
+            <div class="chartTitle"> <p>Compared Personal Values</p></div>
 			<!--<div id="legenddiv"></div>-->
 		<div id="chartdiv"></div>
 
@@ -709,8 +722,8 @@
 						<img class='center-fit' src="colours_image/green.png" >
 					</div>
 					<div class="intro" >
-						 <p> <font style="font-family: WildWest;  font-size: large" color="#82B241"> Universalism </font><br>
-						<font style="font-family: Verdana; ">Understanding, appreciation, tolerance and protection
+						 <p> <font style="font-size: large" color="#82B241"> Universalism </font><br>
+						<font>Understanding, appreciation, tolerance and protection
 							for the welfare of all people and for nature.</font>
 					    </p>
 					</div>
@@ -721,8 +734,8 @@
 						<img class='center-fit' src="colours_image/darkgreen.png" >
 					</div>
 					<div class="intro">
-						 <p> <font style="font-family: WildWest;  font-size: large; " color="#4E7A35"> Benevolence </font><br>
-						     <font style="font-family: Verdana; ">Preservation and enhancement of the welfare of people with whom one is in frequent personal contact.
+						 <p> <font style="font-size: large; " color="#4E7A35"> Benevolence </font><br>
+						     <font>Preservation and enhancement of the welfare of people with whom one is in frequent personal contact.
 								  	</font>
 					    </p>
 					</div>
@@ -733,8 +746,8 @@
 						<img class='center-fit' src="colours_image/blue.png" >
 					</div>
 					<div class="intro">
-						 <p> <font style="font-family: WildWest;  font-size: large; " color="#3DAEE4"> Tradition </font><br>
-						<font style="font-family: Verdana; ">Respect, commitment and acceptance of the customs and ideas that traditional culture or religion provide the self.</font>
+						 <p> <font style="font-size: large; " color="#3DAEE4"> Tradition </font><br>
+						<font>Respect, commitment and acceptance of the customs and ideas that traditional culture or religion provide the self.</font>
 					    </p>
 					</div>
 					<div class="white"></div>
@@ -743,9 +756,9 @@
 						<img class='center-fit' src="colours_image/lightpurple.png" >
 					</div>
 					<div class="intro">
-						 <p> <font style="font-family: WildWest;  font-size: large; " color="#6878D8"> Conformity </font><br>
-						<font style="font-family: Verdana; ">Restraint of actions, inclinations and
-							impulses likely to upset or harm others and violate social expectations or norms..</font>
+						 <p> <font style="font-size: large; " color="#6878D8"> Conformity </font><br>
+						<font>Restraint of actions, inclinations and
+							impulses likely to upset or harm others and violate social expectations or norms.</font>
 					</p>
 					</div>
 					<div class="white"></div>
@@ -754,8 +767,8 @@
 						<img class='center-fit' src="colours_image/darkblue.png" >
 					</div>
 					<div class="intro">
-						  <p> <font style="font-family: WildWest;  font-size: large; " color="#0473BA"> Security </font><br>
-						<font style="font-family: Verdana; ">Safety, harmony, and stability of society, of relationships, and of self.</font>
+						  <p> <font style="font-size: large; " color="#0473BA"> Security </font><br>
+						<font>Safety, harmony, and stability of society, of relationships, and of self.</font>
 					</p>
 					</div>
 
@@ -770,8 +783,8 @@
 						<img class='center-fit' src="colours_image/purple.png" >
 					</div>
 					<div class="intro" >
-						 <p> <font style="font-family: WildWest;  font-size: large" color="#872784"> Power </font><br>
-						<font style="font-family: Verdana; ">Social status and prestige, control or
+						 <p> <font style="font-size: large" color="#872784"> Power </font><br>
+						<font>Social status and prestige, control or
 							dominance over people and resources.</font>
 					</p>
 					</div>
@@ -782,8 +795,8 @@
 						<img class='center-fit' src="colours_image/red.png" >
 					</div>
 					<div class="intro">
-						 <p> <font style="font-family: WildWest;  font-size: large; " color="#D62129"> Achievement </font><br>
-						<font style="font-family: Verdana; ">Personal success through demonstrating competence according to social standards.
+						 <p> <font style="font-size: large; " color="#D62129"> Achievement </font><br>
+						<font>Personal success through demonstrating competence according to social standards.
 						</font>
 					</p>
 					</div>
@@ -794,8 +807,8 @@
 						<img class='center-fit' src="colours_image/pink.png" >
 					</div>
 					<div class="intro" >
-						 <p> <font style="font-family: WildWest;  font-size: large; " color="#F158A1"> Hedonism </font><br>
-						<font style="font-family: Verdana; ">Pleasure and sensuous gratification for oneself. </font>
+						 <p> <font style="font-size: large; " color="#F158A1"> Hedonism </font><br>
+						<font>Pleasure and sensuous gratification for oneself. </font>
 					</p>
 					</div>
 					<div class="white"></div>
@@ -804,8 +817,8 @@
 						<img class='center-fit' src="colours_image/orange.png" >
 					</div>
 					<div class="intro">
-						 <p> <font style="font-family: WildWest;  font-size: large; " color="#F26F2C"> Stimulation </font><br>
-						<font style="font-family: Verdana; ">Excitement, novelty and challenge in life.</font>
+						 <p> <font style="font-size: large; " color="#F26F2C"> Stimulation </font><br>
+						<font>Excitement, novelty and challenge in life.</font>
 					</p>
 					</div>
 					<div class="white"></div>
@@ -814,11 +827,12 @@
 						<img class='center-fit' src="colours_image/yellow.png" >
 					</div>
 					<div class="intro">
-						  <p> <font style="font-family: WildWest;  font-size: large; " color="#F7CF25"> Self-direction </font><br>
-						<font style="font-family: Verdana; ">Independent thought and action—choosing, creating, exploring.</font>
+						  <p> <font style="font-size: large; " color="#F7CF25"> Self-direction </font><br>
+						<font>Independent thought and action—choosing, creating, exploring.</font>
 					</p>
 					</div>
 				</div>
+                
 			</div>
 
 		<!--<img width="80%" style="margin-left: 9%;margin-top: 8%;margin-bottom: 5%;" src="WechatIMG94.png">-->
