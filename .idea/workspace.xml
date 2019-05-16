@@ -8,22 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4c66d5f1-9d8c-49ae-8042-9ba3e74ea809" name="Default Changelist" comment="add shuffle and edit questions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/CollectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/CollectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/ComparisonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/ComparisonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/MeanUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/MeanUserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/UserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/CollectionMsg.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/ComparisonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/ComparisonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/ComparisionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/ComparisionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/QuestionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/About.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/chart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/csv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/csv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/bala.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/controller/UserApiController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/mapper/UserMapper.class" beforeDir="false" />
@@ -202,8 +186,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/chart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="233" column="33" lean-forward="true" selection-start-line="233" selection-start-column="33" selection-end-line="233" selection-end-column="33" />
+            <state relative-caret-position="168">
+              <caret line="217" lean-forward="true" selection-start-line="217" selection-end-line="217" />
               <folding>
                 <element signature="e#1430#1912#1" expanded="true" />
                 <element signature="n#style#0;n#font#0;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -495,7 +479,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557990119090" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558020273686" />
     <property name="last_opened_file_path" value="E:/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -645,7 +629,7 @@
       <workItem from="1557751541268" duration="3687000" />
       <workItem from="1557841592106" duration="5412000" />
       <workItem from="1557853249048" duration="27142000" />
-      <workItem from="1558008574690" duration="666000" />
+      <workItem from="1558008574690" duration="943000" />
     </task>
     <task id="LOCAL-00001" summary="save user data api &amp; questin api &amp; integration">
       <created>1554407258213</created>
@@ -738,17 +722,23 @@
       <option name="project" value="LOCAL" />
       <updated>1557895717608</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="clean code and changes made by client are implemented">
+      <created>1558020092511</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1558020092513</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110473000" />
+    <option name="totallyTimeSpent" value="110750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36762482" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36762482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -834,7 +824,8 @@
     <MESSAGE value="Fengyu's update and csv edited" />
     <MESSAGE value="change absolute path to relative path" />
     <MESSAGE value="edit pie chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit pie chart" />
+    <MESSAGE value="clean code and changes made by client are implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean code and changes made by client are implemented" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/UserApiController.java" />
@@ -1155,8 +1146,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/chart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="233" column="33" lean-forward="true" selection-start-line="233" selection-start-column="33" selection-end-line="233" selection-end-column="33" />
+        <state relative-caret-position="168">
+          <caret line="217" lean-forward="true" selection-start-line="217" selection-end-line="217" />
           <folding>
             <element signature="e#1430#1912#1" expanded="true" />
             <element signature="n#style#0;n#font#0;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
