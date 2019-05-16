@@ -13,9 +13,7 @@
 			background-size: cover;
 			height: 100%;
 			width: 100%;
-			
 		}
-		
 		.navigator ul{
 			background-color: rgba(179,179,179,0.4);
 			list-style-type: none;
@@ -23,16 +21,12 @@
 			padding:0;
 			width: 100%;
 			overflow: hidden;
-	
 		}
-		
 		.navigator li{
 			float: left;
 			display: block;
 			width: 50%;
-			
 		}
-		
 		.navigator li a{
 			display: block;
 			color: rgba(255,255,255,0.8);
@@ -40,44 +34,45 @@
 			font-size: 30px;
 			margin-top: 1%;
 			margin-bottom: 1%;
-			
 		}
-		
 		.main-HomePage {
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            background-color: rgba(255,255,255,0.5);
+            height: 80%;
+            width: 80%;
+            left: 10%;
+            top: 15%;
 		}
-		
 		.main-HomePage #HomePage-title{
 			text-align: center;
 			font-size: 75px;
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			margin-top: 8%;
-			color: white;
+			color: rgb(50,50,50);
 		}
-		
 		.main-HomePage #HomePage-description{
 			text-align: center;
 			font-size: 25px;
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-			color: white;
+			color: rgb(50,50,50);
 			margin-left: 10%;
 			margin-right: 10%;
 		}
-		
 		.main-HomePage #HomePage-button{
 			background-color: rgba(131,131,131,0.8);
 			color: rgba(255,255,255,0.8);
 			font-size: 30px;
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			border:none;
-			margin-left: 35%;
-			margin-top: 8%;
-			width: 30%;
-			height: 100px;
-			line-height: 20%;
+			margin-left: 30%;
+			margin-top: 3%;
+			width: 40%;
+            line-height: 150%;
+            height: 20%;
 			cursor: pointer;
-				
 		}
-		
 		.main-questionPage{
 			position: absolute;
 			padding: 0;
@@ -88,9 +83,7 @@
 			left: 10%;
 			top: 15%;
 			display: none;
-			
 		}
-		
 		.main-questionPage p{
 			height: 40px;
 			margin: 3% 6% 3% 10%;
@@ -100,14 +93,12 @@
 			display: none;
 			width: 80%
 		}
-		
 		.main-questionPage #img-write {
 			margin: 6% 0 0 10%;
 			width: 650px;
 			padding: 0;
 			height: 45px;
 		}
-		
 		.main-questionPage .topAnswer {
 			margin: 6% 6% 0 10%;
 			width: 80%;
@@ -115,7 +106,6 @@
 			list-style: none;
 			
 		}
-		
 		.main-questionPage .topAnswer li {
 			float: left;
 			width: 16.666%;
@@ -124,36 +114,28 @@
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			color: darkgray;
 		}
-		
 		.main-questionPage #answerBar {
 			margin: 0 6% 4% 10%;
 			width: 80%;
 			padding: 30px 0 30px 0;
 			list-style: none;
 			overflow: block;
-			
 		}
-		
 		.main-questionPage #answerBar li {
 			float: left;
 			width: 16.666%;
 			height: 15px;
 			cursor: pointer;
 		}
-		
-		
 		.main-questionPage .red #NotLikeMeAtAll {
 			background-color: #f26563;
 		}
-		
 		.main-questionPage .red #NotLikeMe {
 			background-color: #eb5856;
 		}
-		
 		.main-questionPage .red #ALittleLikeMe {
 			background-color: #e44846;
 		}
-		
 		.main-questionPage .red #ModeratelyLikeMe{
 			background-color: #dc3b38;
 		}
@@ -307,8 +289,6 @@
 		.main-questionPage .darkBlue #VeryLikeMe {
 			background-color: #0970b3;
 		}
-		
-		
 		.main-questionPage .darkPurple #NotLikeMeAtAll {
 			background-color: #aeb8fb;
 		}
@@ -327,8 +307,8 @@
 		.main-questionPage .darkPurple #VeryLikeMe {
 			background-color: #6675da;
 		}
-		
 		.main-questionPage .progressBar {
+            display: none;
 			position: absolute;
 			bottom: 70px;
 			left: 10%;
@@ -342,12 +322,18 @@
 			right: 20px;
 			bottom: 20px;
 		}
-		
+        .main-questionPage #balala{
+            bottom: 1%;
+        }
+        .main-questionPage #progressText{
+            font-size: 15px;
+            font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+            margin-left: 48%;
+        }
 		.main-questionPage #questionPage-NextButton:hover {
             color:dimgray;
 			bottom:19px;
 		}
-		
 		.main-questionPage #questionPage-BackButton {
 			position: absolute;
 			background-color: #ffffff;
@@ -356,15 +342,11 @@
 			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 			left: 20px;
 			bottom: 20px;
-
 		}
-		
 		.main-questionPage #questionPage-BackButton:hover {
             color:dimgray;
 			bottom:19px;
 		}
-		
-		
 		.red {
 			display: none;
 		}
@@ -417,11 +399,21 @@
 		.rotate45 {
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+            -o-transfoorm: rotate(45deg);
+            transform:rm: rotate(45deg);
+            -ms-transf rotate(45deg);
+        }
+        #postQuestionButton {
+            background-color: transparent;
+            position: absolute;
+            border: none;
+            font-size: 30px;
+            font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+            right: 20px;
+            bottom: 10px;
         }
 		#submit {
+            display: none;
 		    background-color: transparent;
 			position: absolute;
 			border: none;
@@ -430,7 +422,6 @@
 			right: 20px;
 			bottom: 10px;
 		}
-		
 		.tip { 
 			background: #eee; 
 			border: 1px solid #ccc; 
@@ -440,8 +431,7 @@
 			position: relative; 
 			width: 200px; 
 			visibility: hidden;
-		} 
-
+		}
 		.tip:before { 
 			position: absolute; 
 			display: inline-block; 
@@ -452,8 +442,7 @@
 			left: -8px; 
 			top: 12px; 
 			content: ''; 
-		} 
-
+		}
 		.tip:after { 
 			position: absolute; 
 			display: inline-block; 
@@ -467,8 +456,6 @@
 	</style>
 	<script>
 	$(document).ready(function(){
-		
-		
 		//for question type
 		var typelist = [];
 		//collect all
@@ -476,7 +463,7 @@
 		//for random question
 		var qestionArray = [];
         htmlobj=$.ajax({
-            url:"http://13.236.67.235:8080/question/getquestions",
+            url:"question/getquestions",
             type : "POST",
             async:false,
             success: function(result){
@@ -500,13 +487,9 @@
 		var count = 0
 		var newArray = qestionArray;
   		$("#HomePage-button").click(function(){
-	
-			
-			
 			window.onbeforeunload = function(e) {
     		(e || window.event).returnValue = 'Leave site？';
 			}
-
 			count = 1
     		$(".main-HomePage").slideToggle();
 			$(".main-questionPage p").css("display","none");
@@ -554,8 +537,12 @@
 			$(".main-questionPage #answerBar").css("display","block");
 			$(".main-questionPage").css("background-color","#FFFFFF")
 			}
-			
 		});
+        $(".main-questionPage .topAnswer li").click(function(){
+            var index = $(this).index();
+            var button = $(".main-questionPage #answerBar li")[index];
+            button.click();
+        });
 		// for answer bar
 		$(".main-questionPage #answerBar li").click(function(){
 			$(".main-questionPage #answerBar li").css("height","15px");
@@ -570,7 +557,6 @@
 				}else{
 				   allchoose[count-1] = $(this).index();
 				}
-
 			}
 			var index = $(this).index();
 			var answerTop = $(".main-questionPage .topAnswer li")[index];
@@ -595,6 +581,14 @@
 	$(".main-questionPage #questionPage-NextButton").click(function(){
 		//rebind mouse event
 		$(".main-questionPage .topAnswer li").css("color","darkgray");
+        $(".main-questionPage .topAnswer li").mouseenter(function(){
+            $(".main-questionPage #answerBar li").css("height","15px");
+            $(".main-questionPage #answerBar li").css("margin","0 auto");
+            $(this).css("height","35px");
+            $(this).css("margin-top","-10px");
+            var index = $(this).index();
+            $($(".main-questionPage .topAnswer li")[index]).css("color","black");
+        });
         $(".main-questionPage #answerBar li").mouseenter(function(){
 			$(".main-questionPage #answerBar li").css("height","15px");
 			$(".main-questionPage #answerBar li").css("margin","0 auto");
@@ -608,6 +602,11 @@
 			$(".main-questionPage #answerBar li").css("margin","0 auto");
 		    $(".main-questionPage .topAnswer li").css("color","darkgrey");
 		});
+        $(".main-questionPage .topAnswer li").mouseleave(function(){
+            $(".main-questionPage #answerBar li").css("height","15px");
+            $(".main-questionPage #answerBar li").css("margin","0 auto");
+            $(".main-questionPage .topAnswer li").css("color","darkgrey");
+        });
 		if((!$(".main-questionPage #answerBar li").hasClass("selected")) && allchoose.length < count){
 				alert("You have to choose one answer!");
 		}else {
@@ -618,6 +617,7 @@
 				} else {
 				    $(".main-questionPage .progressBar").append('<img style="margin-right: 10px" src="icons8-flower-64.png" alt="progressIcon" width="30px" height="30px"/>');
 				}
+				document.getElementById("progressText").innerText = (count+1) + "/21";
 				$(".main-questionPage #answerBar li").css("height","15px");
 				$(".main-questionPage #answerBar li").css("margin","0 auto");
 				$(".main-questionPage p").css("display","none");
@@ -661,7 +661,6 @@
 			}
 		count += 1;
 		}
-		
 		if(allchoose.length >= count){
 			$($(".main-questionPage #answerBar li")[allchoose[count-1]]).css("height","35px");
 			$($(".main-questionPage #answerBar li")[allchoose[count-1]]).css("margin-top","-10px");	
@@ -675,7 +674,6 @@
 		typelist[i] = $($(".main-questionPage p")[newArray[i]]).attr("class");
 	}
 	var strTypeList = typelist.join("-");
-
 	$(".main-questionPage #questionPage-BackButton").click(function(){
 		if(count > 1){
 			$(".main-questionPage p").css("display","none");
@@ -712,7 +710,6 @@
 			$(".main-questionPage #answerBar").attr("class","darkGreen");
 			$(".main-questionPage").css("background-color","#FFFFFF");
 			}
-		
 			var index = allchoose[count-2];
 			$(".main-questionPage #answerBar li").css("height","15px");
 			$(".main-questionPage #answerBar li").css("margin","0 auto");
@@ -731,37 +728,9 @@
 		}			
 		$(".main-questionPage #answerBar li").unbind("mouseenter");
 		$(".main-questionPage #answerBar li").unbind("mouseleave");
-	//	$(".main-questionPage p").css("display","none");
-	//  $($(".main-questionPage p")[newArray[count-2]]).css("display","block");
-	//	if(colorArray[count-2] == 0){
-	//	$(".main-questionPage #answerBar").attr("class","yellow");
-	//	$(".main-questionPage").css("background-color","rgba(243,240,202,0.9)")
-	//	} if (colorArray[count-2] == 1) {
-	//	$(".main-questionPage #answerBar ").attr("class","red");
-	//	$(".main-questionPage").css("background-color","rgba(231,220,220,0.9)")
-	//	} if (colorArray[count-2] == 2) {
-	//	$(".main-questionPage #answerBar").attr("class","blue");
-	//	$(".main-questionPage").css("background-color","rgba(192,223,225,0.9)")
-	//	} if(colorArray[count-2]==3){
-	//	$(".main-questionPage #answerBar").attr("class","green");
-	//	$(".main-questionPage").css("background-color","rgba(197,232,200,0.9)");
-	//	}
-	//	count -= 1;
-	//
-	//	alert(count);
-	//	alert(allchoose);
-	//	$($(".main-questionPage #answerBar li")[allchoose[count-1]]).css("height","35px");
-	//	$($(".main-questionPage #answerBar li")[allchoose[count-1]]).css("margin-top","-10px");
-	//	$($(".main-questionPage .topAnswer li")[allchoose[count-1]]).css("visibility","visible");
 	});
 	$("#Home").click(function(){
 		window.location.reload();
-//		if(count>=1){
-//			var r = confirm("Leave survey? Changes made may not be saved.");
-//			if (r==true){
-//				window.location.reload();			
-//			}
-//		}
 	});
 	$("#postcode").keyup(function(){
 		var c = $(this);
@@ -797,7 +766,7 @@
 			$("#optionalQuestion").css("display","block");
 			$("#optionalQuestion2").css("display","block");
 		}
-	});
+	});$("#submit").disabled = true;
 	$("#submit").click(function(){
 		window.onbeforeunload = null;
 		var row = {};
@@ -808,7 +777,6 @@
 				row[typelist[i]] = allchoose[i];				
 			}
 		}
-
 		var gender = $('input[name="gender"]:checked').val();
     	row["gender"] = gender;
         var country = $("#country").find("option:selected").text();
@@ -820,12 +788,9 @@
 		var postcode = $("#postcode").val();
 		row["postcode"] =  postcode;
 		var json = JSON.stringify(row);
-		console.log(json);
-		
-		//todo
 		$.get("",json);
         $.ajax({
-            url:"http://13.236.67.235:8080/question/saveuserdata",
+            url:"question/saveuserdata",
             type : "POST",
             async:false,
             contentType: 'application/json',
@@ -835,7 +800,7 @@
             window.location.href = "chart.html";
             }
         });
-	sessionStorage.setItem("name",json)
+	    sessionStorage.setItem("name",json)
     });
 		
 	});
@@ -846,8 +811,6 @@
 	<div class="navigator">
 		<ul>
   			<li id="Home"><a href="index.html">Home</a></li>
-     		<!--<li><a href="#news">Instructions</a></li>
-  			<li><a href="#contact">Background</a></li>-->
   			<li><a href="About.html">About</a></li>
 		</ul>
 	</div>
@@ -863,18 +826,7 @@
 	<div class="main-questionPage">
 		<img id="img-write" src="write.png" alt="writing icon" />
 
-		<div id="questions">
-			<!--<p class="SD" >Test111Thinking up new ideas and being creative is important to this person. They like to do things in their own original way. yyyy </p>
-			<p class="POW" >Test222It is important to this person to be rich. They want to have a lot of money and expensive things. yyy</p>
-			<p class="UNI" >Test333This person thinks it is important that everyone in the world be 	treated equally. They believe everyone should have equal opportunities in life. rrr</p>
-			<p class="ACH" >Test444It’s important to this person to show their abilities. They want 	people to admire what they do.rrr </p>
-			<p class="SEC" >Test555It’s important to this person to show their abilities. They want 	people to admire what they do. bbb</p>
-			<p class="STIM" >Test666It’s important to this person to show their abilities. They want 	people to admire what they do. bbb</p>
-			<p class="CON" >Test777It’s important to this person to show their abilities. They want 	people to admire what they do. ggg</p>
-			<p class="TRAD" >Test888It’s important to this person to show their abilities. They want 	people to admire what they do. ggg</p>
-			<p class="HED" >Test999It’s important to this person to show their abilities. They want 	people to admire what they do. ooo</p>
-			<p class="HED" >Test101010It’s important to this person to show their abilities. They want people to admire what they do. ooo</p>-->
-		</div>
+		<div id="questions"></div>
 
 		<ul class="topAnswer">
 			<li>Not like me at all</li>
@@ -898,17 +850,21 @@
 			<img style="margin-right: 5px" src="icons8-flower-64.png" alt="progressIcon" width="30px" height="30px"/>
 		</div>
 
-		<button id="questionPage-NextButton">NEXT</button>
-		<button id="questionPage-BackButton">BACK</button>
+            <button id="questionPage-NextButton">NEXT</button>
+        <div id="balala"><span id="progressText">1/21</span></div>
+            <button id="questionPage-BackButton">BACK</button>
+
 	</div>
 	
 <div class="main-PostPage">
+
 	<p>That’s it! You’ve completed the values survey. Before we share your results, we have a few
 	quick questions about you.</p>
 	
 	
 	<form style="overflow: auto; height: 80%;" id="postQuestion">
-		Which country do you live in?
+        <div id="firstpart">
+            Which country do you live in?
 		<select id="country" name="country">
 	    	<option value="Australia" selected="selected" id="Australia">Australia</option>
             <option value="Afghanistan">Afghanistan</option>
@@ -1160,6 +1116,9 @@
 			What is your postcode?<br>
 			<input style="margin-right: 2%" id="postcode" type="text"><span class="tip">Please enter correct postcode</span>
 		</div>
+
+        </div>
+        <div id="secondpart" style="display: none;">
 		<br>
 		What is your gender?<br>
 		<input type="radio" name="gender" value="Female">Female<br>
@@ -1186,10 +1145,17 @@
 			<input type="radio" name="party" value="An independent or minor party">An independent or minor party<br>
 			<input type="radio" name="party" value="Don't know/undecided">Don't know/undecided		
 		</div>
+        </div>
  	</form>
+    <button id="postQuestionButton" onclick="f()">Next</button>
+    <script>function f(){
+        document.getElementById("firstpart").style.display="none";
+        document.getElementById("postQuestionButton").style.display="none";
+        document.getElementById("secondpart").style.display="block"
+        document.getElementById("submit").style.display="block";
+    }</script>
 	<button id="submit">SUBMIT</button>
-	
-	</div>
+</div>>
 </body>
 	
 </html>

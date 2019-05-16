@@ -23,6 +23,7 @@ public class ComparisionServiceImpl implements ComparisonService {
         System.out.println(list.size());
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getCount() != 0) {
+                // calculate the mean values and the result has two decimals
                 list.get(i).setAch((double) Math.round(100 * list.get(i).getAch() / list.get(i).getCount()) / 100);
                 list.get(i).setCon((double) Math.round(100 * list.get(i).getCon() / list.get(i).getCount()) / 100);
                 list.get(i).setHed((double) Math.round(100 * list.get(i).getHed() / list.get(i).getCount()) / 100);
@@ -33,30 +34,8 @@ public class ComparisionServiceImpl implements ComparisonService {
                 list.get(i).setTrad((double) Math.round(100 * list.get(i).getTrad() / list.get(i).getCount()) / 100);
                 list.get(i).setUni((double) Math.round(100 * list.get(i).getUni() / list.get(i).getCount()) / 100);
                 list.get(i).setBen((double) Math.round(100 * list.get(i).getBen() / list.get(i).getCount()) / 100);
-
             }
         }
-        /**for (int i = 0; i < list.size(); i++) {
-            mean.setAch(mean.getAch() + list.get(i).getAch());
-            mean.setCon(mean.getCon() + list.get(i).getCon());
-            mean.setHed(mean.getHed() + list.get(i).getHed());
-            mean.setPow(mean.getPow() + list.get(i).getPow());
-            mean.setSec(mean.getSec() + list.get(i).getSec());
-            mean.setStim(mean.getStim() + list.get(i).getStim());
-            mean.setSd(mean.getSd() + list.get(i).getSd());
-            mean.setTrad(mean.getTrad() + list.get(i).getTrad());
-            mean.setUni(mean.getUni() + list.get(i).getUni());
-        }
-        mean.setAch(mean.getAch() / list.size());
-        mean.setCon(mean.getCon() / list.size());
-        mean.setHed(mean.getHed() / list.size());
-        mean.setPow(mean.getPow() / list.size());
-        mean.setSec(mean.getSec() / list.size());
-        mean.setStim(mean.getStim() / list.size());
-        mean.setSd(mean.getSd() / list.size());
-        mean.setTrad(mean.getTrad() / list.size());
-        mean.setUni(mean.getUni() / list.size());
-        return mapper.GetAllDataByUserData(data).get(0);**/
         return list;
     }
 
@@ -66,6 +45,7 @@ public class ComparisionServiceImpl implements ComparisonService {
         List<LinkedHashMap<String, Object>> csvData = new ArrayList<>();
         List<UserData> list = mapper.GetAllDataByUserData(data);
         LinkedHashMap<String, Object> header = new LinkedHashMap<>();
+        // putting the headers into csv file
         header.put("1","sd");
         header.put("2","pow");
         header.put("3","uni");
@@ -83,6 +63,7 @@ public class ComparisionServiceImpl implements ComparisonService {
         header.put("15","party");
         csvData.add(header);
         for (int i = 0; i < list.size(); i++) {
+            // put the data of each row into csv file
             LinkedHashMap<String, Object> body = new LinkedHashMap<>();
             body.put("1",list.get(i).getSd());
             body.put("2",list.get(i).getPow());
@@ -109,24 +90,22 @@ public class ComparisionServiceImpl implements ComparisonService {
 
     }
 
+    // write the data into the csv file which is in byte array
     public static byte[] exportCSV(List<LinkedHashMap<String, Object>> exportData) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         BufferedWriter buffCvsWriter = null;
         try {
             buffCvsWriter = new BufferedWriter(new OutputStreamWriter(out, StandardCharsets.UTF_8));
-            // 将body数据写入表格
             for (Iterator<LinkedHashMap<String, Object>> iterator = exportData.iterator(); iterator.hasNext(); ) {
                 fillDataToCsv(buffCvsWriter, iterator.next());
                 if (iterator.hasNext()) {
                     buffCvsWriter.newLine();
                 }
             }
-            // 刷新缓冲
             buffCvsWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            // 释放资源
             if (buffCvsWriter != null) {
                 try {
                     buffCvsWriter.close();
@@ -138,6 +117,7 @@ public class ComparisionServiceImpl implements ComparisonService {
         return out.toByteArray();
     }
 
+    // put the data into csv file
     private static void fillDataToCsv(BufferedWriter buffCvsWriter, LinkedHashMap row) throws IOException {
         Map.Entry propertyEntry;
         for (Iterator<Map.Entry> propertyIterator = row.entrySet().iterator(); propertyIterator.hasNext(); ) {

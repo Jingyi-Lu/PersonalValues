@@ -1,5 +1,6 @@
 package com.pvs.personalvalues.model;
 
+// collect the data of a certain user
 public class UserData {
     double sd;
     double pow;
@@ -137,4 +138,5 @@ public class UserData {
     public String getPostcode() {
         return postcode;
     }
+
 }

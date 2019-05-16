@@ -1,5 +1,6 @@
 package com.pvs.personalvalues.model;
 
+// question type
 public class Question {
     int QuestionNumber;
     int QuestionaireId;

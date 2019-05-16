@@ -8,6 +8,5 @@ import java.util.List;
 
 public interface ComparisonService {
     List<MeanUserData> GetAverageDataByUserData(UserData data);
-
     void getCsvFile(OutputStream out);
 }

@@ -18,11 +18,13 @@ public class ComparisonController {
     @Autowired
     ComparisonService service;
 
+    // error = 1 : success and message contains a list of average values
     @RequestMapping("/getAverageDataByUserData")
     public ComparisonMsg GetAverageDataByUserData(@RequestBody UserData data){
         ComparisonMsg msg = new ComparisonMsg();
         msg.setData(service.GetAverageDataByUserData(data));
         msg.setError(1);
+        LOGGER.info("Average data is fetched by user data");
         return msg;
     }
 }

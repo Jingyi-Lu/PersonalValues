@@ -23,19 +23,21 @@ public class QuestionController {
     @Autowired
     QuestionService questionService;
 
+    // get question list
     @RequestMapping("/getquestions")
     public QuestionMsg GetQuestions(){
-        LOGGER.info("bala");
         QuestionMsg msg = questionService.getQuestions();
+        LOGGER.info("Question list is returned");
         return msg;
     }
 
+    // save the user data into database
     @RequestMapping(value = "/saveuserdata", method = RequestMethod.POST)
     public SaveUserDataMsg SaveUserData(@RequestBody UserData data){
         SaveUserDataMsg msg = new SaveUserDataMsg();
         msg.setError(1);
-        LOGGER.info(data.getParty());
         msg = questionService.saveUserData(data);
+        LOGGER.info("The user data is successfully returned");
         return msg;
     }
 }

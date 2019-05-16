@@ -6,20 +6,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c66d5f1-9d8c-49ae-8042-9ba3e74ea809" name="Default Changelist" comment="fengyu's update and fix some bugs">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/csv.html" afterDir="false" />
+    <list default="true" id="4c66d5f1-9d8c-49ae-8042-9ba3e74ea809" name="Default Changelist" comment="add shuffle and edit questions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/CollectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/CollectionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/ComparisonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/ComparisonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/mapper/ComparisonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/mapper/ComparisonMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/QuestionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/MeanUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/MeanUserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/ComparisonMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/ComparisonMsg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/CollectionMsg.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/ComparisonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/ComparisonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/ComparisionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/ComparisionServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/QuestionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ComparisonMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ComparisonMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/survey.sql" beforeDir="false" afterPath="$PROJECT_DIR$/survey.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/bala.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/bala.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/About.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/About.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/chart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/csv.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/csv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/bala.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/controller/UserApiController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/mapper/UserMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/model/User.class" beforeDir="false" />
@@ -28,6 +33,8 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/service/UserService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/pvs/personalvalues/service/impl/UserServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/wokesite.war" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/wokesite/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/wokesite/WEB-INF/classes/META-INF/PersonalValues.kotlin_module" beforeDir="false" />
@@ -107,96 +114,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/survey.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="123" column="31" lean-forward="true" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/QuestionServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/CollectionController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/ComparisonController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/MeanUserData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-              <folding>
-                <element signature="e#380#381#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#446#447#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#1035#1036#0" expanded="true" />
-                <element signature="e#1064#1065#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/Question.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/csv.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12195">
+              <caret line="813" column="30" selection-start-line="813" selection-start-column="25" selection-end-line="813" selection-end-column="30" />
               <folding>
-                <element signature="e#210#211#0" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
-                <element signature="e#292#293#0" expanded="true" />
-                <element signature="e#327#328#0" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/UserData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="129" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="129" />
             </state>
           </provider>
         </entry>
@@ -211,12 +146,88 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/ComparisionServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-490">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="210">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/About.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1140">
+              <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/chart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="233" column="33" lean-forward="true" selection-start-line="233" selection-start-column="33" selection-end-line="233" selection-end-column="33" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1430#1912#1" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#1;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#p#0;n#div#1;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#4;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#p#0;n#div#4;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#7;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#p#0;n#div#7;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#10;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#p#0;n#div#10;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#13;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#p#0;n#div#13;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#1;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#p#0;n#div#1;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#4;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#p#0;n#div#4;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#7;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#p#0;n#div#7;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#10;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#p#0;n#div#10;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#0;n#p#0;n#div#13;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#font#1;n#p#0;n#div#13;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,25 +244,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>newArray</find>
-      <find>qestionArray</find>
-      <find>$(&quot;#questions p&quot;)</find>
-      <find>&quot;#question</find>
-      <find>$(&quot;.main-questionPage p&quot;)</find>
-      <find>questions</find>
-      <find>SD</find>
-      <find>chart</find>
-      <find>aja</find>
-      <find>write</find>
-      <find>icons8</find>
-      <find>118</find>
-      <find>23</find>
-      <find>13</find>
-      <find>gender</find>
-      <find>int</find>
-      <find>13.</find>
-      <find>count</find>
-      <find>form</find>
+      <find>/ques</find>
+      <find>am4themes_animated</find>
+      <find>radiusValue</find>
+      <find>value2</find>
+      <find>/</find>
+      <find>Homepage-shadowbackground</find>
+      <find>main-HomePage</find>
+      <find>Home</find>
+      <find>main-questionPage</find>
+      <find>ModeratelyLikeMe</find>
+      <find>answerBar</find>
+      <find>topAnswer</find>
+      <find>.click(function(){</find>
+      <find>(&quot;.main-questionPage #answerBar li</find>
+      <find>mouseleave</find>
+      <find>mouseenter</find>
+      <find>radio</find>
+      <find>main-PostPage</find>
+      <find>none</find>
+      <find>.css(</find>
+      <find>css(&quot;display&quot;,&quot;none&quot;</find>
+      <find>firstpart</find>
+      <find>submit</find>
+      <find>#ab</find>
+      <find>progressBar</find>
+      <find>progress</find>
+      <find>bottomBar</find>
+      <find>nextbutton</find>
+      <find>progressText</find>
+      <find>About</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -268,27 +290,30 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/UserApiController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/mapper/QuestionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/QuestionService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/QuestionController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ComparisonMapper" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/Question.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/bala.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/CollectionMsg.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/UserData.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/csv.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/CollectionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/ComparisonMsg.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/ComparisonService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/MeanUserData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/ComparisonController.java" />
-        <option value="$PROJECT_DIR$/survey.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/mapper/ComparisonMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ComparisonMapper.xml" />
+        <option value="$PROJECT_DIR$/survey.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/MeanUserData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/Question.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/ComparisionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/QuestionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ComparisonMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/ComparisonService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/CollectionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/ComparisonController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/UserData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/QuestionController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/About.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/csv.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/chart.html" />
       </list>
     </option>
   </component>
@@ -299,18 +324,29 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Personal Values Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="width" value="784" />
+    <option name="height" value="1342" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -361,19 +397,105 @@
             <path>
               <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
               <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="personalvalues" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="personalvalues" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="personalvalues" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="personalvalues" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="msg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="personalvalues" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="personalvalues" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalValues" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalValues" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557599358152" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557990119090" />
     <property name="last_opened_file_path" value="E:/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -516,7 +638,14 @@
       <workItem from="1557316372322" duration="10726000" />
       <workItem from="1557398908717" duration="19667000" />
       <workItem from="1557464144902" duration="3727000" />
-      <workItem from="1557580182020" duration="7563000" />
+      <workItem from="1557580182020" duration="9994000" />
+      <workItem from="1557645839343" duration="1434000" />
+      <workItem from="1557733996663" duration="2368000" />
+      <workItem from="1557747767173" duration="962000" />
+      <workItem from="1557751541268" duration="3687000" />
+      <workItem from="1557841592106" duration="5412000" />
+      <workItem from="1557853249048" duration="27142000" />
+      <workItem from="1558008574690" duration="666000" />
     </task>
     <task id="LOCAL-00001" summary="save user data api &amp; questin api &amp; integration">
       <created>1554407258213</created>
@@ -553,17 +682,73 @@
       <option name="project" value="LOCAL" />
       <updated>1557426622817</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="download csv complete and comparison complete">
+      <created>1557601985086</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1557601985087</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fengyu's update,  some frontend bugs fixed">
+      <created>1557646708904</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1557646708904</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add shuffle and edit questions">
+      <created>1557735033837</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1557735033838</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add shuffle and edit questions">
+      <created>1557844399681</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1557844399681</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Karmick's update">
+      <created>1557846178719</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557846178719</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fengyu's update and csv edited">
+      <created>1557856786058</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1557856786058</updated>
+    </task>
+    <task id="LOCAL-00012" summary="change absolute path to relative path">
+      <created>1557894153902</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1557894153902</updated>
+    </task>
+    <task id="LOCAL-00013" summary="edit pie chart">
+      <created>1557895717608</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1557895717608</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66371000" />
+    <option name="totallyTimeSpent" value="110473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1663113" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36762482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -572,8 +757,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2537961" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33442622" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -586,13 +771,13 @@
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286334" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.20824295" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.20491803" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32995737" />
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -642,30 +827,17 @@
     <MESSAGE value="Karmick's update and production server config" />
     <MESSAGE value="comparison interface 50% complete, enable csv download" />
     <MESSAGE value="fengyu's update and fix some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fengyu's update and fix some bugs" />
+    <MESSAGE value="download csv complete and comparison complete" />
+    <MESSAGE value="Fengyu's update,  some frontend bugs fixed" />
+    <MESSAGE value="add shuffle and edit questions" />
+    <MESSAGE value="Karmick's update" />
+    <MESSAGE value="Fengyu's update and csv edited" />
+    <MESSAGE value="change absolute path to relative path" />
+    <MESSAGE value="edit pie chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit pie chart" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/LoginMsg.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/SignupMsg.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/mapper/UserMapper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/UserApiController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/QuestionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/SaveUserDataMsg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imgs/schedule_v4.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -705,16 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -732,34 +894,10 @@
     <entry file="file://$PROJECT_DIR$/target/PersonalValues/write.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-          <folding>
-            <element signature="e#793#811#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WechatIMG94.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WechatIMG96.jpeg" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/bala.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="237" column="52" selection-start-line="237" selection-start-column="45" selection-end-line="237" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="674">
@@ -775,36 +913,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/Collection.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/mapper/QuestionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/icons8-flower-64.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11895">
-          <caret line="793" column="65" selection-start-line="793" selection-start-column="4" selection-end-line="793" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WechatIMG30.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/write.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/chart.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/UserDataRaw.java" />
+    <entry file="file://$PROJECT_DIR$/survey.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="3" selection-start-line="1" selection-end-line="2" />
+        <state relative-caret-position="465">
+          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/PVS_circle.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WechatIMG30.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/bala.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/filter/CORSFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -812,53 +941,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/CollectionMsg.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/mapper/QuestionMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="135">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/MeanUserData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="71" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/ComparisonService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/QuestionMsg.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/UserData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-end-line="5" />
+        <state relative-caret-position="467">
+          <caret line="140" column="4" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/QuestionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/csv.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/ComparisionServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+        <state relative-caret-position="282">
+          <caret line="119" column="33" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/QuestionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/QuestionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="461">
+          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/CollectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/ComparisonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/CollectionMsg.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/mapper/ComparisonMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -883,47 +1064,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/MeanUserData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/QuestionMsg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#1035#1036#0" expanded="true" />
-            <element signature="e#1064#1065#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#210#211#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="129" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/ComparisionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-490">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/msg/SaveUserDataMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/csv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12195">
+          <caret line="813" column="30" selection-start-line="813" selection-start-column="25" selection-end-line="813" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -935,46 +1111,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/model/UserData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/QuestionMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="210">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/survey.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="123" column="31" lean-forward="true" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/service/impl/QuestionServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+        <state relative-caret-position="165">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/About.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="233" column="33" lean-forward="true" selection-start-line="233" selection-start-column="33" selection-end-line="233" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/CollectionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pvs/personalvalues/controller/ComparisonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1430#1912#1" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#1;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#p#0;n#div#1;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#4;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#p#0;n#div#4;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#7;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#p#0;n#div#7;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#10;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#p#0;n#div#10;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#13;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#p#0;n#div#13;n#div#0;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#1;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#p#0;n#div#1;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#4;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#p#0;n#div#4;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#7;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#p#0;n#div#7;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#10;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#p#0;n#div#10;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#0;n#p#0;n#div#13;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#font#1;n#p#0;n#div#13;n#div#2;n#div#7;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

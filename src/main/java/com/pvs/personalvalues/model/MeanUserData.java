@@ -1,5 +1,7 @@
 package com.pvs.personalvalues.model;
 
+// collecting statistics of user data of a certain class
+// the values are the sum values and the count is the number of samples
 public class MeanUserData {
     double sd;
     double pow;

@@ -35,6 +35,7 @@ public class QuestionServiceImpl implements QuestionService {
     @Override
     public SaveUserDataMsg saveUserData(UserData data) {
         SaveUserDataMsg msg = new SaveUserDataMsg();
+        // calculate the result based on the given algorithm
         data.setAch(data.getAch() / 2.0);
         data.setBen(data.getBen() / 2.0);
         data.setCon(data.getCon() / 2.0);
@@ -46,9 +47,11 @@ public class QuestionServiceImpl implements QuestionService {
         data.setTrad(data.getTrad() / 2.0);
         data.setUni(data.getUni() / 3.0);
         msg.setError(1);
+        // save the user data into database
         mapper.saveUserData(data);
         List<MeanUserData> list = mapper2.GetMeanUserDataByUserData(data);
         for (int i = 0; i < list.size(); i++) {
+            // update the statistics table with new user data
             list.get(i).setAch(list.get(i).getAch() + data.getAch());
             list.get(i).setCon(list.get(i).getCon() + data.getCon());
             list.get(i).setHed(list.get(i).getHed() + data.getHed());
@@ -60,9 +63,7 @@ public class QuestionServiceImpl implements QuestionService {
             list.get(i).setUni(list.get(i).getUni() + data.getUni());
             list.get(i).setBen(list.get(i).getBen() + data.getBen());
             list.get(i).setCount(list.get(i).getCount() + 1);
-            System.out.println(list.get(i).getCount());
             mapper2.UpdateStatisticsByMeanUserData(list.get(i));
-
         }
         return msg;
     }
