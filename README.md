@@ -91,9 +91,8 @@ We are using Slack for team communication and we contact our client via email or
 
 #### Tracibility
 
-We are using [Zenhub](https://github.com/Jingyi-Lu/PersonalValues#workspaces/personalvalues-5c847a088c3c284b9ea195c2/reports/burndown?milestoneId=4126219) for tracking the progress for technical issues. 
+We are using Github issue system and [Zenhub](https://github.com/Jingyi-Lu/PersonalValues#workspaces/personalvalues-5c847a088c3c284b9ea195c2/reports/burndown?milestoneId=4126219) for tracking the progress for technical issues. 
 
-And we are using [Trello](https://trello.com/b/jWCw4csg/online-personal-value) for tracking the progress for non-technical issues.
 
 #### Documentation
 
